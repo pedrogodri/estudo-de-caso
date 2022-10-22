@@ -1,6 +1,6 @@
 public class CadastrarComprador extends CadastroUsuario {
 
-	private boolean consultar;
+	private String consultar;
 
 	private CadastroUsuario cadastroUsuario;
 
