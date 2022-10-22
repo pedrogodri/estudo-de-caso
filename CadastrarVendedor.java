@@ -5,5 +5,13 @@ public class CadastrarVendedor extends CadastroUsuario {
 	public boolean vender() {
 		return false;
 	}
+	
+	public boolean cadastrarVeiculo() {
+		return false;
+	}
+	
+	public boolean excluirVeiculo() {
+		return false;
+	}
 
 }
