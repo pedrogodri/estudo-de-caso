@@ -8,7 +8,7 @@ public class CadastroVeiculo {
 
 	private String ano;
 
-	private int pneu;
+	private String pneu;
 
 	private CadastrarComprador cadastrarComprador;
 
