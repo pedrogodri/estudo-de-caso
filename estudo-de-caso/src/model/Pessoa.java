@@ -7,6 +7,8 @@ public class Pessoa {
 	private Integer idade;
 	private String cpf;
 	private Date dataNasciemnto;
+	private String rg;
+	
 	public String getNome() {
 		return nome;
 	}
@@ -30,5 +32,11 @@ public class Pessoa {
 	}
 	public void setDataNasciemnto(Date dataNasciemnto) {
 		this.dataNasciemnto = dataNasciemnto;
+	}
+	public String getRg() {
+		return rg;
+	}
+	public void setRg(String rg) {
+		this.rg = rg;
 	}
 }
