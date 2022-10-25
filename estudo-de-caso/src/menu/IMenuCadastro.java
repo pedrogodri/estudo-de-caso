@@ -1,10 +1,9 @@
 package menu;
 
 public interface IMenuCadastro {
-	Integer menuCadastro();
-	void listar();
-	void cadastrar();
-	void alterar();
-	void excluir();
-	void comprar();
+    Integer MenuCadastro();
+    void Listar();
+    void Cadastrar();
+    void Alterar();
+    void Excluir();
 }
