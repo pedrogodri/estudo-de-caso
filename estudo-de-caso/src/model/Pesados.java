@@ -3,7 +3,6 @@ package model;
 public class Pesados extends Veiculo {
 	private String sistemaFrenagem;
 	private Float comprimento;
-	private Float capacidade;
 	
 	public String getSistemaFrenagem() {
 		return sistemaFrenagem;
