@@ -1,6 +1,6 @@
 package cadastros;
 
-import menu.IMenuCadastro;
+import interfaces.IMenuCadastro;
 
 public class CadastroVeiculo implements IMenuCadastro {
 

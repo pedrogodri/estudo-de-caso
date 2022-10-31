@@ -1,4 +1,4 @@
-package menu;
+package interfaces;
 
 public enum OpcoesGeraisMenuEnums {
 	SAIR("0"),
