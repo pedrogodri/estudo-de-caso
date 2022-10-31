@@ -3,11 +3,13 @@ package model;
 public class Veiculo {
 	private String marca;
 	private String modelo;
-	private String tipo;
-	private Integer ano;
+	private Integer anoFabricação;
 	private Integer qtdPneu;
 	private String cor;
 	private String placa;
+	private Integer totalDonos;
+	private Integer kmRodados;
+	private String tipoAutomovel;
 	
 	public String getMarca() {
 		return marca;
@@ -21,17 +23,11 @@ public class Veiculo {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
-	public String getTipo() {
-		return tipo;
+	public Integer getAnoFabricação() {
+		return anoFabricação;
 	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-	public Integer getAno() {
-		return ano;
-	}
-	public void setAno(Integer ano) {
-		this.ano = ano;
+	public void setAnoFabricação(Integer anoFabricação) {
+		this.anoFabricação = anoFabricação;
 	}
 	public Integer getQtdPneu() {
 		return qtdPneu;
@@ -50,5 +46,35 @@ public class Veiculo {
 	}
 	public void setPlaca(String placa) {
 		this.placa = placa;
+	}
+	public Integer getTotalDonos() {
+		return totalDonos;
+	}
+	public void setTotalDonos(Integer totalDonos) {
+		this.totalDonos = totalDonos;
+	}
+	public Integer getKmRodados() {
+		return kmRodados;
+	}
+	public void setKmRodados(Integer kmRodados) {
+		this.kmRodados = kmRodados;
+	}
+	public String getTipoAutomovel() {
+		return tipoAutomovel;
+	}
+	public void setTipoAutomovel(String tipoAutomovel) {
+		this.tipoAutomovel = tipoAutomovel;
+	}
+	
+	public void estadoVeiculo() {
+		
+	}
+	
+	public void veiculoEspecificacao() {
+		
+	}
+	
+	public void veiculoUtilizado() {
+		
 	}
 }
