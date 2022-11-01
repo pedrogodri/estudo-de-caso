@@ -16,10 +16,4 @@ public class Pesados extends Veiculo {
 	public void setComprimento(Float comprimento) {
 		this.comprimento = comprimento;
 	}
-	public Float getCapacidade() {
-		return capacidade;
-	}
-	public void setCapacidade(Float capacidade) {
-		this.capacidade = capacidade;
-	}
 }
