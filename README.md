@@ -8,8 +8,8 @@
 <p align="center"> :construction: <b>Projeto em construção</b> :construction: </p>
 
 # :hammer: Funcionalidades do projeto-    
-`Funcionalidade 1`: Cadastrar Veículos
-`Funcionalidade 2`: Listar Veículos
-`Funcionalidade 3`: Alterar Veículos
-`Funcionalidade 4`: Excluir Veículos
-`Funcionalidade 5`: Cadastrar Usuários
+`Funcionalidade 1` : Cadastrar Veículos</br>
+`Funcionalidade 2` : Listar Veículos</br>
+`Funcionalidade 3` : Alterar Veículos</br>
+`Funcionalidade 4` : Excluir Veículos</br> 
+`Funcionalidade 5` : Cadastrar Usuários</br>
