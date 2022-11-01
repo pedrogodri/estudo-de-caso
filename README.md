@@ -17,9 +17,9 @@
 `Funcionalidade 5` : Cadastrar Usuários</br>
 
 # 🏗️ Tecnologias utilizadas
-`Funcionalidade 1` : Java 8</br>
-`Funcionalidade 2` : Java SE JDK 8</br>
-`Funcionalidade 3` : IDE eclipse workspace</br>
+`Tecnologia 1` : Java 8</br>
+`Tecnologia 2` : Java SE JDK 8</br>
+`Tecnologia 3` : IDE eclipse workspace</br>
 
 # ⌨️ Autores
 | [<img src="https://avatars.githubusercontent.com/u/86849487?v=4" width=115><br><sub>Pedro Henrique Godri</sub>](https://github.com/pedrogodri) |  [<img src="https://avatars.githubusercontent.com/u/95860101?v=4" width=115><br><sub>Rafael Eduardo Ronchi Filho</sub>](https://github.com/RafaelRonchi) |  [<img src="https://avatars.githubusercontent.com/u/111302374?v=4" width=115><br><sub>Vitor Hugo Schiphorst</sub>](https://github.com/VitorSchiphorst) |  [<img src="https://avatars.githubusercontent.com/u/114950761?v=4" width=115><br><sub>Bárbara do Nascimento</sub>](https://github.com/BahNasc) |
