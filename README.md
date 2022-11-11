@@ -28,6 +28,11 @@
 <p align="justify">Tendo em vista que a forma utilizada atualmente é arcaica, nosso sistema visa facilitar a vida dos usuário nas compras e troca de carros. Tem como objetivo tornar mais prática a venda de automóveis, contando com as opções de criar um usuário realizando o seu cadastro Caso o usuário seja um vendedor, poderá cadastrar um carro, moto, ônibus ou caminhão. Se necessário o vendedor pode descadastrar um veículo também. Mas se o usuário for um comprador, ele poderá comprar os veículos anunciados pelos vendedores, e também poderá anunciar seus veículos.</p>
 
 # 📈 Diagrama de Classes
+<p align="center">
+
+<img src="https://user-images.githubusercontent.com/95860101/201417817-1c2808a9-4a3b-46f2-8892-382d2e1c67b7.png">
+
+</p>
 <ul>
   <li><b>Usuario</b>: Possui uma associação a classe UsuarioDAO. Conta com sete atributos privados, nome, cpf e rg que são cadeias de caracteres, conta também com o atributo idade que é um Integer e dataNacimento um Date;
   <li><b>UsuarioDAO</b>: Possui uma associação a classe Usuario. Conta com um atributo que é um ArrayList de usuários e possui um método cadastrarUsuario sem retorno.
