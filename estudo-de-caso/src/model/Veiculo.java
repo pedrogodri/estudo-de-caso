@@ -72,16 +72,4 @@ public class Veiculo {
 	public void setTipoAutomovel(String tipoAutomovel) {
 		this.tipoAutomovel = tipoAutomovel;
 	}
-	
-	public void estadoVeiculo() {
-		
-	}
-	
-	public void veiculoEspecificacao() {
-		
-	}
-	
-	public void veiculoUtilizado() {
-		
-	}
 }
