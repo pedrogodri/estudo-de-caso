@@ -1,6 +1,9 @@
 package model;
 
 public class Veiculo {
+	
+	private Integer id;
+
 	private String marca;
 	private String modelo;
 	private Integer anoFabricação;
@@ -10,6 +13,13 @@ public class Veiculo {
 	private Integer totalDonos;
 	private Integer kmRodados;
 	private String tipoAutomovel;
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	
 	public String getMarca() {
 		return marca;
