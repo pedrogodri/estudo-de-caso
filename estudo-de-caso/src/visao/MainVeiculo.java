@@ -28,6 +28,14 @@ public class MainVeiculo {
 			}
 			case 1: {
 				Veiculo veiculo = new Veiculo();
+			}
+			case 2: {
+				
+			}
+			case 3: {
+				
+			}
+			case 4: {
 				
 			}
 			default:
