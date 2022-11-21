@@ -12,11 +12,11 @@ public class MainVeiculo {
 		while(opcaoEscolhida != 0) {
 			System.out.println("╔══════════════╗\n"
 					         + "║ MENU EXEMPLO ║\n"
-					         + "║  ┆0┆ SAIR    ║\n"
-					         + "║ ❶ CADASTRAR  ║\n"
-					         + "║  ❷ ALTERAR   ║\n"
-					         + "║  ❸ EXCLUIR   ║\n"
-					         + "║   𝟰 LISTAR   ║\n"
+					         + "║ ┆0┆ SAIR     ║\n"
+					         + "║ ┆1┆ CADASTRAR║\n"
+					         + "║ ┆2┆ ALTERAR  ║\n"
+					         + "║ ┆3┆ EXCLUIR  ║\n"
+					         + "║ ┆4┆ LISTAR   ║\n"
 					         + "╚══════════════╝\n");
 			
 
