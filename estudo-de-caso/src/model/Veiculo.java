@@ -10,7 +10,14 @@ public class Veiculo {
 	private Integer totalDonos;
 	private Integer kmRodados;
 	private String tipoAutomovel;
+	private String tipoCombustivel;
 	
+	public String getTipoCombustivel() {
+		return tipoCombustivel;
+	}
+	public void setTipoCombustivel(String tipoCombustivel) {
+		this.tipoCombustivel = tipoCombustivel;
+	}
 	public String getMarca() {
 		return marca;
 	}
