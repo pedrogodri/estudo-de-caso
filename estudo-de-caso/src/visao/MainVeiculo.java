@@ -19,7 +19,7 @@ public class MainVeiculo {
 					         + "║ ┆4┆ LISTAR   ║\n"
 					         + "╚══════════════╝\n");
 			
-
+			System.out.print("Selecione uma opção acima: ");
 			opcaoEscolhida = Integer.valueOf(ler.nextLine());
 			
 			switch (opcaoEscolhida) {
