@@ -1,8 +1,6 @@
-package control;
+package model;
 
 import java.util.ArrayList;
-
-import model.Veiculo;
 
 public interface VeiculoDAO {
     

@@ -3,6 +3,7 @@ package control;
 import java.util.ArrayList;
 
 import model.Veiculo;
+import model.VeiculoDAO;
 
 public class VeiculoJDBC implements VeiculoDAO {
 	private ArrayList<Veiculo> veiculos;
