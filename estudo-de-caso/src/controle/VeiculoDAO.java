@@ -5,36 +5,42 @@ import java.util.Random;
 
 import model.Caminhao;
 import model.Carro;
+import model.IVeiculoDAO;
 import model.Moto;
 import model.Pesados;
 import model.Veiculo;
 import model.Onibus;
 
-public class VeiculoDAO {
+public class VeiculoDAO implements IVeiculoDAO {
 	
-	ArrayList<Veiculo> listaVeiculo = new ArrayList();
-	public VeiculoDAO() {
-		listaVeiculo = new ArrayList<Veiculo>();
-		cargaListas();
+	private static ArrayList<Veiculo> listaVeiculo;
+	
+	public void cadastrarVeiculo() {
+		listaVeiculo.add();
 	}
-	public void cargaListas() {
-		cargaVeiculos();
+	
+	public void alterar(Veiculo v) {
+		listaVeiculo.remove(v);
+		listaVeiculo.add(v);
 	}
-	public void cargaVeiculos() {
-		Integer numeroAleatorio = gerarNumeroAleatorio();
+	
+	public void excluir(Veiculo v) {
+		listaVeiculo.remove(v);
+	}
+	
+	public void comprar(Veiculo v) {
+		listaVeiculo.remove(v);
+	}
+	
+	public void listar(Veiculo v) {
+		System.out.println(listaVeiculo);
+	}
+
+	@Override
+	public void cadastrarVeiculo() {
+		// TODO Auto-generated method stub
 		
-		String[] marcaCarro = {"Toyota", "BMW", "Mercedes", "Volkswagen", "Ford", "Fiat", "Audi"};
-		String[] modeloCarro = {"Corolla Cross", "M8 Grand Coupé", "Golf GTI", "Fiesta", "Toro", "R8 5.2 FSI"};
-		String[] marcaMoto = {"BMW", "Honda", "Yamaha", "Vespa", "Suzuki", "Kawasaki"};
-		String[] modeloMoto = {"R 1200", "XRE 190", "TT-R 230", "Classic VXL 150", "GSX-S750", "Ninja 300"};
-		String[] marcaCaminhao = {"Scania", "MAN", "Volkswagen", "Iveco", "Volvo", "Mercedes"};
-		String[] modeloCaminhao = {"45R", "TGX", "Meteor 29520", "Hi-Way", "FMX", "Axor"};
-		String[] marcaOnibus = {"Mercedes", "Volkswagen", "Volvo", "Agrale", "Scania", "Iveco"};
-		String[] modeloOnibus = {"Proconve P8", "Vw 18320", "B510R", "MA 10.10", "Scania K", "70C17"};
 	}
 	
-	public Integer gerarNumeroAleatorio() {
-		Random gerador = new Random();
-		return gerador.nextInt();
-	}
+	
 }
