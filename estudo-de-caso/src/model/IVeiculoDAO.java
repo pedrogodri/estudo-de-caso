@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public interface VeiculoDAO {
+public interface IVeiculoDAO {
     
 	public ArrayList<Veiculo> listarVeiculos();
     

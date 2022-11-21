@@ -3,12 +3,12 @@ package control;
 import java.util.ArrayList;
 
 import model.Veiculo;
-import model.VeiculoDAO;
+import model.IVeiculoDAO;
 
-public class VeiculoJDBC implements VeiculoDAO {
+public class VeiculoDAO implements IVeiculoDAO {
 	private ArrayList<Veiculo> veiculos;
 	
-	public VeiculoJDBC() {
+	public VeiculoDAO() {
 		this.veiculos = new ArrayList<>();
 	}
 	
@@ -33,7 +33,6 @@ public class VeiculoJDBC implements VeiculoDAO {
 
 	@Override
 	public boolean excluir(Veiculo v, Integer id) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 }

@@ -13,14 +13,16 @@ public class Veiculo {
 	private Integer totalDonos;
 	private Integer kmRodados;
 	private String tipoAutomovel;
-	
+	private String tipoCombustivel;
+
+
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
+
 	public String getMarca() {
 		return marca;
 	}
@@ -74,5 +76,11 @@ public class Veiculo {
 	}
 	public void setTipoAutomovel(String tipoAutomovel) {
 		this.tipoAutomovel = tipoAutomovel;
+	}
+	public String getTipoCombustivel() {
+		return tipoCombustivel;
+	}
+	public void setTipoCombustivel(String tipoCombustivel) {
+		this.tipoCombustivel = tipoCombustivel;
 	}
 }
