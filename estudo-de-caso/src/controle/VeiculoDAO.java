@@ -1,4 +1,4 @@
-package utils;
+package controle;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -11,11 +11,7 @@ import model.Veiculo;
 import model.Onibus;
 
 public class VeiculoDAO {
-	//ArrayList<Pesados> listaPesados = new ArrayList();
-	//ArrayList<Carro> listaCarro = new ArrayList();
-	//ArrayList<Moto> listaMoto = new ArrayList();
-	//ArrayList<Caminhao> listaCaminhao = new ArrayList();
-	//ArrayList<Onibus> listaOnibus = new ArrayList();
+	
 	ArrayList<Veiculo> listaVeiculo = new ArrayList();
 	public VeiculoDAO() {
 		listaVeiculo = new ArrayList<Veiculo>();
