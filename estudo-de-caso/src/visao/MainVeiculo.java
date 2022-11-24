@@ -1,5 +1,6 @@
 package visao;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import modelo.Veiculo;
@@ -13,10 +14,10 @@ public class MainVeiculo {
 			System.out.println("╔══════════════╗\n"
 					         + "║ MENU EXEMPLO ║\n"
 					         + "║ ┆0┆ SAIR     ║\n"
-					         + "║ ┆1┆ CADASTRAR║\n"
-					         + "║ ┆2┆ ALTERAR  ║\n"
-					         + "║ ┆3┆ EXCLUIR  ║\n"
-					         + "║ ┆4┆ LISTAR   ║\n"
+					         + "║ ┆1┆ LISTAR   ║\n"
+					         + "║ ┆2┆ CADASTRAR║\n"
+					         + "║ ┆3┆ ALTERAR  ║\n"
+					         + "║ ┆4┆ EXCLUIR  ║\n"
 					         + "╚══════════════╝\n");
 			
 			System.out.print("Selecione uma opção acima: ");
@@ -27,6 +28,7 @@ public class MainVeiculo {
 				break;
 			}
 			case 1: {
+				clearConsole();
 				Veiculo veiculo = new Veiculo();
 			}
 			case 2: {
@@ -44,5 +46,27 @@ public class MainVeiculo {
 		
 		
 		
+	}
+	
+	public static void clearConsole()
+	{
+		Scanner scanner = new Scanner(System.in);
+        String texto = scanner.next();
+
+        //Limpa a tela no windows, no linux e no MacOS
+        if (System.getProperty("os.name").contains("Windows"))
+			try {
+				new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+			} catch (InterruptedException | IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		else
+			try {
+				Runtime.getRuntime().exec("clear");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 }
