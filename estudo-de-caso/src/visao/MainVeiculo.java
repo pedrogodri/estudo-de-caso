@@ -10,12 +10,16 @@ public class MainVeiculo {
 		Integer opcaoEscolhida = Integer.MAX_VALUE;
 		
 		while(opcaoEscolhida != 0) {
-			System.out.println("- MENU EXEMPLO -");
-			System.out.println("0 SAIR");
-			System.out.println("1 CADASTRAR");
-			System.out.println("2 ALTERAR");
-			System.out.println("3 EXCLUIR");
-			System.out.println("4 LISTAR");
+			System.out.println("╔══════════════╗\n"
+					         + "║ MENU EXEMPLO ║\n"
+					         + "║ ┆0┆ SAIR     ║\n"
+					         + "║ ┆1┆ CADASTRAR║\n"
+					         + "║ ┆2┆ ALTERAR  ║\n"
+					         + "║ ┆3┆ EXCLUIR  ║\n"
+					         + "║ ┆4┆ LISTAR   ║\n"
+					         + "╚══════════════╝\n");
+			
+			System.out.print("Selecione uma opção acima: ");
 			opcaoEscolhida = Integer.valueOf(ler.nextLine());
 			
 			switch (opcaoEscolhida) {
@@ -24,6 +28,14 @@ public class MainVeiculo {
 			}
 			case 1: {
 				Veiculo veiculo = new Veiculo();
+			}
+			case 2: {
+				
+			}
+			case 3: {
+				
+			}
+			case 4: {
 				
 			}
 			default:
