@@ -1,9 +1,9 @@
-package control;
+package controle;
 
 import java.util.ArrayList;
 
-import model.Veiculo;
-import model.IVeiculoDAO;
+import modelo.IVeiculoDAO;
+import modelo.Veiculo;
 
 public class VeiculoDAO implements IVeiculoDAO {
 	private ArrayList<Veiculo> veiculos;

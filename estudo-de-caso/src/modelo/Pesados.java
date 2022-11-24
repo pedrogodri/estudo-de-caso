@@ -1,4 +1,4 @@
-package model;
+package modelo;
 
 public class Pesados extends Veiculo {
 	private String sistemaFrenagem;

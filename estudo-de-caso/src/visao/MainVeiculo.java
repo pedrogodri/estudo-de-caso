@@ -2,7 +2,7 @@ package visao;
 
 import java.util.Scanner;
 
-import model.Veiculo;
+import modelo.Veiculo;
 
 public class MainVeiculo {
 	public static void main(String[] args) {
