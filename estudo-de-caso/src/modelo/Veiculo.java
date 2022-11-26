@@ -11,7 +11,7 @@ public class Veiculo {
 	private String cor;
 	private String placa;
 	private Integer totalDonos;
-	private Integer kmRodados;
+	private Float kmRodados;
 	private String tipoAutomovel;
 	private String tipoCombustivel;
 
@@ -65,10 +65,10 @@ public class Veiculo {
 	public void setTotalDonos(Integer totalDonos) {
 		this.totalDonos = totalDonos;
 	}
-	public Integer getKmRodados() {
+	public Float getKmRodados() {
 		return kmRodados;
 	}
-	public void setKmRodados(Integer kmRodados) {
+	public void setKmRodados(Float kmRodados) {
 		this.kmRodados = kmRodados;
 	}
 	public String getTipoAutomovel() {
