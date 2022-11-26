@@ -30,7 +30,8 @@
 # 📈 Diagrama de Classes
 <p align="center">
 
-![image](https://user-images.githubusercontent.com/95860101/204065763-1f3964da-0758-438c-ab7e-cf224d88ecd5.png)
+![image](https://user-images.githubusercontent.com/95860101/204069700-f074fd2d-c5fa-4f24-8319-aa0e3b77028f.png)
+
 
 </p>
 <ul>
