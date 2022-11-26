@@ -1,5 +1,6 @@
 package visao;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import modelo.Veiculo;
@@ -27,6 +28,7 @@ public class MainVeiculo {
 				break;
 			}
 			case 1: {
+				limparConsole();
 				Veiculo veiculo = new Veiculo();
 			}
 			case 2: {
@@ -44,5 +46,27 @@ public class MainVeiculo {
 		
 		
 		
+	}
+	
+	public static void limparConsole()
+	{
+		Scanner scanner = new Scanner(System.in);
+        String texto = scanner.next();
+
+        //Limpa a tela no windows, no linux e no MacOS
+        if (System.getProperty("os.name").contains("Windows"))
+			try {
+				new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+			} catch (InterruptedException | IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		else
+			try {
+				Runtime.getRuntime().exec("clear");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 }
