@@ -41,6 +41,7 @@ public class MainVeiculo {
 				
 			}
 			default:
+				break;
 			}
 		}
 		
