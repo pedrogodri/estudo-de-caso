@@ -32,6 +32,8 @@ public class MainVeiculo {
 			case 1: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
+				
+				listaVeiculos.add(veiculo);
 				//Vitor
 			}
 			case 2: {
@@ -42,10 +44,13 @@ public class MainVeiculo {
 			case 3: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
+				
+				//Barbara
 			}
 			case 4: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
+				//Barbara
 			}
 			default:
 				break;
