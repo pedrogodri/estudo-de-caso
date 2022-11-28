@@ -1,6 +1,7 @@
 package visao;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import modelo.Veiculo;
@@ -9,6 +10,7 @@ public class MainVeiculo {
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		Integer opcaoEscolhida = Integer.MAX_VALUE;
+		ArrayList<Veiculo>listaVeiculos = new ArrayList<Veiculo>();
 		
 		while(opcaoEscolhida != 0) {
 			System.out.println("╔══════════════╗\n"
@@ -30,15 +32,20 @@ public class MainVeiculo {
 			case 1: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
+				//Vitor
 			}
 			case 2: {
-				
+				limparConsole();
+				Veiculo veiculo = new Veiculo();
+				//Vitor
 			}
 			case 3: {
-				
+				limparConsole();
+				Veiculo veiculo = new Veiculo();
 			}
 			case 4: {
-				
+				limparConsole();
+				Veiculo veiculo = new Veiculo();
 			}
 			default:
 				break;
