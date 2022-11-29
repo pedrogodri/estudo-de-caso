@@ -44,7 +44,15 @@ public class MainVeiculo {
 			case 3: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
+				System.out.println("╔════════════════════════╗\n");
+				System.out.println("║  ID    MARCA    MODELO ║");
 				
+				for (Veiculo v : listaVeiculos) {
+					System.out.println("║ " + v.getId() + v.getModelo() + " ║\n");
+				}
+				
+				
+				System.out.println("╚══════════════╝\n");
 				//Barbara
 			}
 			case 4: {
@@ -56,8 +64,6 @@ public class MainVeiculo {
 				break;
 			}
 		}
-		
-		
 		
 	}
 	
@@ -82,4 +88,6 @@ public class MainVeiculo {
 				e.printStackTrace();
 			}
 	}
+	
+
 }
