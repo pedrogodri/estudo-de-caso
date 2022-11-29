@@ -44,15 +44,37 @@ public class MainVeiculo {
 			case 3: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
-				System.out.println("╔════════════════════════╗\n");
-				System.out.println("║  ID    MARCA    MODELO ║\n");
+				Integer opcao;
+				Boolean encontrou = false;
+				Integer id;
 				
-				for (Veiculo v : listaVeiculos) {
-					System.out.println("║ " + v.getId() + v.getModelo() + " ║\n");
+				while (true)
+				{
+					System.out.println("╔════════════════════════╗\n");
+					System.out.println("║  ID    MARCA    MODELO ║\n");
+					
+					for (Veiculo v : listaVeiculos) {
+						System.out.println("║ " + v.getId() + v.getModelo() + " ║\n");
+					}
+					System.out.println("╚══════════════╝\n");
+					
+					System.out.println("Informe o id do veiculo para excluir: ");
+					id = Integer.valueOf(ler.nextLine());
+					
+					if(id.equals(0))
+					{
+						System.out.println("Você saiu");
+						break;
+					}
+					
+					
+					
 				}
 				
 				
-				System.out.println("╚══════════════╝\n");
+				
+				
+				
 				//Barbara
 			}
 			case 4: {
