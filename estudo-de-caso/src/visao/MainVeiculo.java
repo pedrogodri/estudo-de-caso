@@ -45,7 +45,7 @@ public class MainVeiculo {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
 				System.out.println("╔════════════════════════╗\n");
-				System.out.println("║  ID    MARCA    MODELO ║");
+				System.out.println("║  ID    MARCA    MODELO ║\n");
 				
 				for (Veiculo v : listaVeiculos) {
 					System.out.println("║ " + v.getId() + v.getModelo() + " ║\n");
@@ -58,6 +58,21 @@ public class MainVeiculo {
 			case 4: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
+				System.out.println("╔════════════════════════╗\n");
+				System.out.println("║   LISTA DE VEICULOS    ║\n");
+				for (Veiculo v : listaVeiculos) {
+					System.out.println("║ Marca: " + v.getMarca() + " ║\n"
+									 + "║ Modelo: " + v.getModelo() + " ║\n"
+									 + "║ Ano fabricação: " + v.getAnoFabricação() + " ║\n"
+									 + "║ Pneus: " + v.getQtdPneu() + " ║\n"
+									 + "║ Cor: " + v.getCor() + " ║\n"
+									 + "║ Placa: " + v.getPlaca() + " ║\n"
+									 + "║ Total donos: " + v.getTotalDonos() + " ║\n"
+									 + "║ KM rodados: " + v.getKmRodados() + " ║\n"
+									 + "║ Tipo automovel: " + v.getTipoAutomovel() + " ║\n"
+									 + "║ Tipo combustivel: " + v.getTipoCombustivel() + " ║\n");
+				}
+				System.out.println("╚══════════════╝\n");
 				//Barbara
 			}
 			default:
