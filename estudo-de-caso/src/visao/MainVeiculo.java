@@ -1,6 +1,7 @@
 package visao;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import modelo.Veiculo;
@@ -9,6 +10,7 @@ public class MainVeiculo {
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		Integer opcaoEscolhida = Integer.MAX_VALUE;
+		ArrayList<Veiculo>listaVeiculos = new ArrayList<Veiculo>();
 		
 		while(opcaoEscolhida != 0) {
 			System.out.println("╔══════════════╗\n"
@@ -30,22 +32,53 @@ public class MainVeiculo {
 			case 1: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
+				
+				listaVeiculos.add(veiculo);
+				//Vitor
 			}
 			case 2: {
-				
+				limparConsole();
+				Veiculo veiculo = new Veiculo();
+				//Vitor
 			}
 			case 3: {
+				limparConsole();
+				Veiculo veiculo = new Veiculo();
+				System.out.println("╔════════════════════════╗\n");
+				System.out.println("║  ID    MARCA    MODELO ║\n");
 				
+				for (Veiculo v : listaVeiculos) {
+					System.out.println("║ " + v.getId() + v.getModelo() + " ║\n");
+				}
+				
+				
+				System.out.println("╚══════════════╝\n");
+				//Barbara
 			}
 			case 4: {
-				
+				limparConsole();
+				Veiculo veiculo = new Veiculo();
+				System.out.println("╔════════════════════════╗\n");
+				System.out.println("║   LISTA DE VEICULOS    ║\n");
+				for (Veiculo v : listaVeiculos) {
+					System.out.println("║ Marca: " + v.getMarca() + " ║\n"
+									 + "║ Modelo: " + v.getModelo() + " ║\n"
+									 + "║ Ano fabricação: " + v.getAnoFabricação() + " ║\n"
+									 + "║ Pneus: " + v.getQtdPneu() + " ║\n"
+									 + "║ Cor: " + v.getCor() + " ║\n"
+									 + "║ Placa: " + v.getPlaca() + " ║\n"
+									 + "║ Total donos: " + v.getTotalDonos() + " ║\n"
+									 + "║ KM rodados: " + v.getKmRodados() + " ║\n"
+									 + "║ Tipo automovel: " + v.getTipoAutomovel() + " ║\n"
+									 + "║ Tipo combustivel: " + v.getTipoCombustivel() + " ║\n");
+				}
+				System.out.println("╚══════════════╝\n");
+				//Barbara
 			}
 			default:
 				break;
 			}
 		}
-		
-		
 		
 	}
 	
@@ -70,4 +103,6 @@ public class MainVeiculo {
 				e.printStackTrace();
 			}
 	}
+	
+
 }

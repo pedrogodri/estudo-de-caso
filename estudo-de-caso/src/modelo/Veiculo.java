@@ -22,7 +22,6 @@ public class Veiculo {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
 	public String getMarca() {
 		return marca;
 	}
