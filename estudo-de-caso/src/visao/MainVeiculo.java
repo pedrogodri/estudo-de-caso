@@ -67,6 +67,20 @@ public class MainVeiculo {
 						break;
 					}
 					
+					for (Veiculo v : listaVeiculos) {
+						if(id.equals(v.getId()))
+						{
+							encontrou = true;
+							listaVeiculos.remove(v);
+							System.out.println("Operação feita com sucesso");
+							break
+						}
+					}
+					
+					if(encontrou == false) 
+					{
+						System.out.println("Codigo informado nao existe");
+					}
 					
 					
 				}
