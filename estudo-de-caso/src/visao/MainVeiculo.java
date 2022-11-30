@@ -107,6 +107,18 @@ public class MainVeiculo {
 					                 + "║ ┆9 ┆ TIPO VEÍCULO       ║\n"
 					                 + "║ ┆10┆ COMBUSTÍVEL USADO  ║\n"
 					                 + "╚═════════════════════════╝\n");
+					
+					switch (opcaoEscolhida) {
+					case 0: {
+						break;
+					}
+					case 1: {
+						break;
+					}
+					case 2: {
+						
+					}
+					}
 				}
 				
 				//Vitor
