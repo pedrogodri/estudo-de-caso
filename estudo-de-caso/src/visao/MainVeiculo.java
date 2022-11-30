@@ -13,14 +13,14 @@ public class MainVeiculo {
 		ArrayList<Veiculo>listaVeiculos = new ArrayList<Veiculo>();
 		
 		while(opcaoEscolhida != 0) {
-			System.out.println("╔══════════════╗\n"
-					         + "║ MENU EXEMPLO ║\n"
-					         + "║ ┆0┆ SAIR     ║\n"
-					         + "║ ┆1┆ CADASTRAR║\n"
-					         + "║ ┆2┆ ALTERAR  ║\n"
-					         + "║ ┆3┆ EXCLUIR  ║\n"
-					         + "║ ┆4┆ LISTAR   ║\n"
-					         + "╚══════════════╝\n");
+			System.out.println("╔════════════════╗\n"
+					         + "║ MENU PRINCIPAL ║\n"
+					         + "║ ┆0┆ SAIR       ║\n"
+					         + "║ ┆1┆ CADASTRAR  ║\n"
+					         + "║ ┆2┆ ALTERAR    ║\n"
+					         + "║ ┆3┆ EXCLUIR    ║\n"
+					         + "║ ┆4┆ LISTAR     ║\n"
+					         + "╚════════════════╝\n");
 			
 			System.out.print("Selecione uma opção acima: ");
 			opcaoEscolhida = Integer.valueOf(ler.nextLine());
