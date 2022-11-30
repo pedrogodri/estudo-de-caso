@@ -6,7 +6,7 @@ public class Veiculo {
 
 	private String marca;
 	private String modelo;
-	private Integer anoFabricação;
+	private Integer anoFabricacao;
 	private Integer qtdPneu;
 	private String cor;
 	private String placa;
@@ -34,11 +34,11 @@ public class Veiculo {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
-	public Integer getAnoFabricação() {
-		return anoFabricação;
+	public Integer getAnoFabricacao() {
+		return anoFabricacao;
 	}
-	public void setAnoFabricação(Integer anoFabricação) {
-		this.anoFabricação = anoFabricação;
+	public void setAnoFabricacao(Integer anoFabricacao) {
+		this.anoFabricacao = anoFabricacao;
 	}
 	public Integer getQtdPneu() {
 		return qtdPneu;

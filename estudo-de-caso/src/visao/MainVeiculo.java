@@ -33,8 +33,42 @@ public class MainVeiculo {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
 				
+				System.out.println("╔════════════════════════════════════════════════╗\n"
+						          +"║ NECESSITAMOS DE ALGUMAS INFORMAÇÕES DO VEÍCULO ║\n"
+				                  +"╚════════════════════════════════════════════════╝\n");
+				System.out.println("-> MARCA(Ex:. Fiat): ");
+				veiculo.setMarca(ler.nextLine());
+				
+				System.out.println("-> MODELO(Ex:. Argo): ");
+				veiculo.setModelo(ler.nextLine());
+				
+				System.out.println("-> ANO DE FABRICAÇÃO(Ex:. 2022): ");
+				veiculo.setAnoFabricacao(ler.nextInt());
+				
+				System.out.println("-> QUANTIDADE DE PNEU(Ex:. 4): ");
+				veiculo.setQtdPneu(ler.nextInt());
+				
+				System.out.println("-> COR (Ex:. Branco): ");
+				veiculo.setCor(ler.nextLine());
+				
+				System.out.println("-> PLACA(Ex:. AE34F65): ");
+				veiculo.setPlaca(ler.nextLine());
+				
+				System.out.println("-> DONOS(Ex:. 2): ");
+				veiculo.setTotalDonos(ler.nextInt());
+				
+				System.out.println("-> KMs RODADOS(Ex:. 365.67):");
+				veiculo.setKmRodados(ler.nextFloat());
+				
+				System.out.println("-> TIPO DO VEÍCULO(Ex:. SUV): ");
+				veiculo.setTipoAutomovel(ler.nextLine());
+				
+				System.out.println("-> COMBUSTÍVEL USADO(Ex:. Gasolina): ");
+				veiculo.setTipoCombustivel(ler.nextLine());
+				
+				System.out.println("╚════════════════════════════════════════════════╝\n");
+				
 				listaVeiculos.add(veiculo);
-				//Vitor
 			}
 			case 2: {
 				limparConsole();
@@ -63,7 +97,7 @@ public class MainVeiculo {
 				for (Veiculo v : listaVeiculos) {
 					System.out.println("║ Marca: " + v.getMarca() + " ║\n"
 									 + "║ Modelo: " + v.getModelo() + " ║\n"
-									 + "║ Ano fabricação: " + v.getAnoFabricação() + " ║\n"
+									 + "║ Ano fabricação: " + v.getAnoFabricacao() + " ║\n"
 									 + "║ Pneus: " + v.getQtdPneu() + " ║\n"
 									 + "║ Cor: " + v.getCor() + " ║\n"
 									 + "║ Placa: " + v.getPlaca() + " ║\n"
