@@ -54,7 +54,7 @@ public class MainVeiculo {
 				System.out.println("-> PLACA(Ex:. AE34F65): ");
 				veiculo.setPlaca(ler.nextLine());
 				
-				System.out.println("-> DONOS(Ex:. 2): ");
+				System.out.println("-> TOTAL DONOS(Ex:. 2): ");
 				veiculo.setTotalDonos(ler.nextInt());
 				
 				System.out.println("-> KMs RODADOS(Ex:. 365.67):");
@@ -73,6 +73,42 @@ public class MainVeiculo {
 			case 2: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
+				Integer escolhaID = Integer.MAX_VALUE;
+				Integer alterar = Integer.MAX_VALUE;
+				
+					
+				System.out.println("╔════════════════════════╗\n");
+				System.out.println("║  ID    MARCA    MODELO ║\n");
+					
+				for (Veiculo v : listaVeiculos) {
+						System.out.println("║ " + v.getId() + v.getModelo() + " ║\n");
+				}
+					
+					
+				System.out.println("╚══════════════╝\n");
+				System.out.println("Selecione o ID do carro para fazer a alteração: ");
+				escolhaID = Integer.valueOf(ler.nextLine());
+					
+				//Fazer para selecionar o carro por meio do ID
+					
+				while(alterar != 0){
+					Integer opcaoAlterar = Integer.MAX_VALUE;
+					System.out.println("╔═════════════════════════╗\n"
+					                 + "║    MENU DE ALTERAÇÃO    ║\n"
+					                 + "║ ┆0 ┆ SAIR               ║\n"
+					                 + "║ ┆1 ┆ MARCA              ║\n"
+					                 + "║ ┆2 ┆ MODELO             ║\n"
+					                 + "║ ┆3 ┆ ANO DE FABRICACÃO  ║\n"
+					                 + "║ ┆4 ┆ QUANTIDADE DE PNEU ║\n"
+					                 + "║ ┆5 ┆ COR                ║\n"
+					                 + "║ ┆6 ┆ PLACA              ║\n"
+					                 + "║ ┆7 ┆ TOTAL DONOS        ║\n"
+					                 + "║ ┆8 ┆ KMs RODADOS        ║\n"
+					                 + "║ ┆9 ┆ TIPO VEÍCULO       ║\n"
+					                 + "║ ┆10┆ COMBUSTÍVEL USADO  ║\n"
+					                 + "╚═════════════════════════╝\n");
+				}
+				
 				//Vitor
 			}
 			case 3: {
