@@ -1,4 +1,4 @@
-package visao;
+ package visao;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -108,14 +108,24 @@ public class MainVeiculo {
 					                 + "║ ┆10┆ COMBUSTÍVEL USADO  ║\n"
 					                 + "╚═════════════════════════╝\n");
 					
+					System.out.println("Informe o que deseja alterar: ");
+					opcaoAlterar =  Integer.valueOf(ler.nextLine());
+					
 					switch (opcaoEscolhida) {
 					case 0: {
 						break;
 					}
 					case 1: {
-						break;
+						System.out.println("Informe a nova Marca: ");
+						
 					}
 					case 2: {
+						
+					}
+					case 3: {
+						
+					}
+					case 4: {
 						
 					}
 					}
