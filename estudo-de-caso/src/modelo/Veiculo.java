@@ -15,26 +15,12 @@ public class Veiculo {
 	private String tipoAutomovel;
 	private String tipoCombustivel;
 
-<<<<<<< HEAD:estudo-de-caso/src/modelo/Veiculo.java
-=======
-	public String getTipoCombustivel() {
-		return tipoCombustivel;
-	}
-	public void setTipoCombustivel(String tipoCombustivel) {
-		this.tipoCombustivel = tipoCombustivel;
-	}
->>>>>>> Vitor:estudo-de-caso/src/model/Veiculo.java
-
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-<<<<<<< HEAD:estudo-de-caso/src/modelo/Veiculo.java
-=======
-	
->>>>>>> Vitor:estudo-de-caso/src/model/Veiculo.java
 	public String getMarca() {
 		return marca;
 	}
@@ -89,13 +75,10 @@ public class Veiculo {
 	public void setTipoAutomovel(String tipoAutomovel) {
 		this.tipoAutomovel = tipoAutomovel;
 	}
-<<<<<<< HEAD:estudo-de-caso/src/modelo/Veiculo.java
 	public String getTipoCombustivel() {
 		return tipoCombustivel;
 	}
 	public void setTipoCombustivel(String tipoCombustivel) {
 		this.tipoCombustivel = tipoCombustivel;
 	}
-=======
->>>>>>> Vitor:estudo-de-caso/src/model/Veiculo.java
 }

@@ -1,5 +1,7 @@
 package model;
 
+import modelo.Veiculo;
+
 public class Moto extends Veiculo {
 	
 	private Integer numeroRodas;
