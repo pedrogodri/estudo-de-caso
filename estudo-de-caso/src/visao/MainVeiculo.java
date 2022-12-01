@@ -73,8 +73,9 @@ public class MainVeiculo {
 			case 2: {
 				limparConsole();
 				Veiculo veiculo = new Veiculo();
-				Integer escolhaID = Integer.MAX_VALUE;
 				Integer alterar = Integer.MAX_VALUE;
+				Boolean encontrou = false;
+				Integer id;
 				
 					
 				System.out.println("╔════════════════════════╗\n");
@@ -87,9 +88,7 @@ public class MainVeiculo {
 					
 				System.out.println("╚══════════════╝\n");
 				System.out.println("Selecione o ID do carro para fazer a alteração: ");
-				escolhaID = Integer.valueOf(ler.nextLine());
-					
-				//Fazer para selecionar o carro por meio do ID
+				id = Integer.valueOf(ler.nextLine());
 					
 				while(alterar != 0){
 					Integer opcaoAlterar = Integer.MAX_VALUE;
@@ -118,20 +117,185 @@ public class MainVeiculo {
 					case 1: {
 						System.out.println("Informe a nova Marca: ");
 						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setMarca(ler.nextLine());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
 					}
 					case 2: {
+						System.out.println("Informe o novo Modelo: ");
 						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setModelo(ler.nextLine());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
 					}
 					case 3: {
+						System.out.println("Informe o novo Ano de Fabricação: ");
 						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setAnoFabricacao(ler.nextInt());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
 					}
 					case 4: {
+						System.out.println("Informe a nova quantidade de Pneu: ");
 						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setQtdPneu(ler.nextInt());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
 					}
+					case 5: {
+						System.out.println("Informe a nova Cor: ");
+						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setCor(ler.nextLine());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
+					}
+					case 6: {
+						System.out.println("Informe a nova Placa: ");
+						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setPlaca(ler.nextLine());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
+					}
+					case 7: {
+						System.out.println("Informe o novo total de Donos: ");
+						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setTotalDonos(ler.nextInt());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
+					}
+					case 8: {
+						System.out.println("Informe a nova Quilometragem: ");
+						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setKmRodados(ler.nextFloat());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
+					}
+					case 9: {
+						System.out.println("Informe o novo Tipo de Automóvel: ");
+						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setTipoAutomovel(ler.nextLine());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
+					}		
+					case 10: {
+						System.out.println("Informe o novo Tipo de Combustível: ");
+						
+						for (Veiculo v : listaVeiculos) {
+							if(id.equals(v.getId()))
+							{
+								encontrou = true;	
+								veiculo.setTipoCombustivel(ler.nextLine());
+								System.out.println("Operação feita com sucesso");
+								break;
+							}
+						}
+						
+						if(encontrou == false) 
+						{
+							System.out.println("Codigo informado nao existe");
+						}
+					}		
 					}
 				}
-				
-				//Vitor
 			}
 			case 3: {
 				limparConsole();
