@@ -15,7 +15,6 @@ public class Veiculo {
 	private String tipoAutomovel;
 	private String tipoCombustivel;
 
-
 	public Integer getId() {
 		return id;
 	}

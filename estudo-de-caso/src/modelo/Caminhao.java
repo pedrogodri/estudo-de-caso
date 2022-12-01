@@ -11,6 +11,4 @@ public class Caminhao extends Pesados{
 	public void setQuantidadePeso(Integer quantidadePeso) {
 		this.quantidadePeso = quantidadePeso;
 	}
-	
-	
 }
