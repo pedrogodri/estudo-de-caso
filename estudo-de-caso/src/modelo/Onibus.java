@@ -10,6 +10,4 @@ public class Onibus extends Pesados {
 	public void setQuantidadeAssentos(Integer quantidadeAssentos) {
 		this.quantidadeAssentos = quantidadeAssentos;
 	}
-	
-	
 }
