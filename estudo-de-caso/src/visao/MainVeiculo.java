@@ -76,14 +76,15 @@ public class MainVeiculo {
 				Boolean encontrou = false;
 				Integer id;
 
-				System.out.println("==========================\n");
-				System.out.println("|  ID    MARCA    MODELO |\n");
+				System.out.println("=========================================\n");
+				System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
 
 				for (Veiculo v : listaVeiculos) {
-					System.out.println("| " + v.getId() + v.getModelo() + " |\n");
+					System.out.println("|    " + v.getId() + "    |    "+ v.getMarca() + "    |    " + v.getModelo() + "    |\n");
+					System.out.println("=========================================\n	");
 				}
 
-				System.out.println("==========================\n");
+				System.out.println("=========================================\n");
 				System.out.println("Selecione o ID do carro para fazer a alteração: ");
 				id = Integer.valueOf(ler.nextLine());
 
@@ -91,7 +92,7 @@ public class MainVeiculo {
 					Integer opcaoAlterar = Integer.MAX_VALUE;
 					System.out.println("===========================\n" + "|    MENU DE ALTERAÇÃO    |\n"
 							+ "| [0]  SAIR               |\n" + "| [1]  MARCA              |\n"
-							+ "| [2]  MODELO             |\n" + "| [3]  ANO DE FABRICACÃO  |\n"
+							+ "| [2]  MODELO             |\n" + "| [3]  ANO DE FABRICACAO  |\n"
 							+ "| [4]  QUANTIDADE DE PNEU |\n" + "| [5]  COR                |\n"
 							+ "| [6]  PLACA              |\n" + "| [7]  TOTAL DONOS        |\n"
 							+ "| [8]  KMs RODADOS        |\n" + "| [9]  TIPO VEÍCULO       |\n"
@@ -111,7 +112,7 @@ public class MainVeiculo {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setMarca(ler.nextLine());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -128,7 +129,7 @@ public class MainVeiculo {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setModelo(ler.nextLine());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -139,13 +140,13 @@ public class MainVeiculo {
 						break;
 					}
 					case 3: {
-						System.out.println("Informe o novo Ano de Fabricação: ");
+						System.out.println("Informe o novo Ano de Fabricacao: ");
 
 						for (Veiculo v : listaVeiculos) {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setAnoFabricacao(ler.nextInt());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -162,7 +163,7 @@ public class MainVeiculo {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setQtdPneu(ler.nextInt());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -179,7 +180,7 @@ public class MainVeiculo {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setCor(ler.nextLine());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -196,7 +197,7 @@ public class MainVeiculo {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setPlaca(ler.nextLine());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -213,7 +214,7 @@ public class MainVeiculo {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setTotalDonos(ler.nextInt());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -230,7 +231,7 @@ public class MainVeiculo {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setKmRodados(ler.nextFloat());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -241,13 +242,13 @@ public class MainVeiculo {
 						break;
 					}
 					case 9: {
-						System.out.println("Informe o novo Tipo de Automóvel: ");
+						System.out.println("Informe o novo Tipo de Automovel: ");
 
 						for (Veiculo v : listaVeiculos) {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setTipoAutomovel(ler.nextLine());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -258,13 +259,13 @@ public class MainVeiculo {
 						break;
 					}
 					case 10: {
-						System.out.println("Informe o novo Tipo de Combustível: ");
+						System.out.println("Informe o novo Tipo de Combustivel: ");
 
 						for (Veiculo v : listaVeiculos) {
 							if (id.equals(v.getId())) {
 								encontrou = true;
 								veiculo.setTipoCombustivel(ler.nextLine());
-								System.out.println("Operação feita com sucesso");
+								System.out.println("Operacao feita com sucesso");
 								break;
 							}
 						}
@@ -286,13 +287,13 @@ public class MainVeiculo {
 				Integer id;
 
 				while (true) {
-					System.out.println("==========================\n");
-					System.out.println("|  ID    MARCA    MODELO |\n");
+					System.out.println("=========================================\n");
+					System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
 
 					for (Veiculo v : listaVeiculos) {
-						System.out.println("| " + v.getId() + v.getModelo() + " |\n");
+						System.out.println("|    " + v.getId() + "    |    "+ v.getMarca() + "    |    " + v.getModelo() + "    |\n");
 					}
-					System.out.println("====================\n");
+					System.out.println("=========================================\n");
 
 					System.out.println("Informe o id do veiculo para excluir: ");
 					id = Integer.valueOf(ler.nextLine());
@@ -306,7 +307,7 @@ public class MainVeiculo {
 						if (id.equals(v.getId())) {
 							encontrou = true;
 							listaVeiculos.remove(v);
-							System.out.println("Operação feita com sucesso");
+							System.out.println("Operacao feita com sucesso");
 							break;
 						}
 					}
@@ -315,7 +316,7 @@ public class MainVeiculo {
 						System.out.println("Codigo informado nao existe");
 						break;
 					}
-
+					break;
 				}
 				break;
 			}
@@ -326,7 +327,7 @@ public class MainVeiculo {
 				System.out.println("|   LISTA DE VEICULOS    |\n");
 				for (Veiculo v : listaVeiculos) {
 					System.out.println("| Marca: " + v.getMarca() + " |\n" + "| Modelo: " + v.getModelo() + " |\n"
-							+ "| Ano fabricação: " + v.getAnoFabricacao() + " |\n" + "| Pneus: " + v.getQtdPneu()
+							+ "| Ano fabricacao: " + v.getAnoFabricacao() + " |\n" + "| Pneus: " + v.getQtdPneu()
 							+ " |\n" + "| Cor: " + v.getCor() + " |\n" + "| Placa: " + v.getPlaca() + " |\n"
 							+ "| Total donos: " + v.getTotalDonos() + " |\n" + "| KM rodados: " + v.getKmRodados()
 							+ " |\n" + "| Tipo automovel: " + v.getTipoAutomovel() + " |\n" + "| Tipo combustivel: "
