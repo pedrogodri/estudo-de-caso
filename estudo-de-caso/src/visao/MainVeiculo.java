@@ -29,7 +29,7 @@ public class MainVeiculo {
 				Veiculo veiculo = new Veiculo();
 
 				System.out.println("==================================================\n"
-						+ "| NECESSITAMOS DE ALGUMAS INFORMAÇÕES DO VEÍCULO |\n"
+						+ "| NECESSITAMOS DE ALGUMAS INFORMACOES DO VEICULO |\n"
 						+ "==================================================\n");
 				System.out.println("-> ID(Ex:. 1): ");
 				veiculo.setId(Integer.valueOf(ler.nextLine()));
@@ -40,7 +40,7 @@ public class MainVeiculo {
 				System.out.println("-> MODELO(Ex:. Argo): ");
 				veiculo.setModelo(ler.nextLine());
 
-				System.out.println("-> ANO DE FABRICAÇÃO(Ex:. 2022): ");
+				System.out.println("-> ANO DE FABRICACAO(Ex:. 2022): ");
 				veiculo.setAnoFabricacao(Integer.valueOf(ler.nextLine()));
 
 				System.out.println("-> QUANTIDADE DE PNEU(Ex:. 4): ");
@@ -90,13 +90,13 @@ public class MainVeiculo {
 
 				while (alterar != 0) {
 					Integer opcaoAlterar = Integer.MAX_VALUE;
-					System.out.println("===========================\n" + "|    MENU DE ALTERAÇÃO    |\n"
+					System.out.println("===========================\n" + "|    MENU DE ALTERACAO    |\n"
 							+ "| [0]  SAIR               |\n" + "| [1]  MARCA              |\n"
 							+ "| [2]  MODELO             |\n" + "| [3]  ANO DE FABRICACAO  |\n"
 							+ "| [4]  QUANTIDADE DE PNEU |\n" + "| [5]  COR                |\n"
 							+ "| [6]  PLACA              |\n" + "| [7]  TOTAL DONOS        |\n"
 							+ "| [8]  KMs RODADOS        |\n" + "| [9]  TIPO VEÍCULO       |\n"
-							+ "| [10] COMBUSTÍVEL USADO  |\n" + "===========================\n");
+							+ "| [10] COMBUSTIVEL USADO  |\n" + "===========================\n");
 
 					System.out.println("Informe o que deseja alterar: ");
 					opcaoAlterar = Integer.valueOf(ler.nextLine());
@@ -326,12 +326,16 @@ public class MainVeiculo {
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE VEICULOS    |\n");
 				for (Veiculo v : listaVeiculos) {
-					System.out.println("| Marca: " + v.getMarca() + " |\n" + "| Modelo: " + v.getModelo() + " |\n"
-							+ "| Ano fabricacao: " + v.getAnoFabricacao() + " |\n" + "| Pneus: " + v.getQtdPneu()
-							+ " |\n" + "| Cor: " + v.getCor() + " |\n" + "| Placa: " + v.getPlaca() + " |\n"
-							+ "| Total donos: " + v.getTotalDonos() + " |\n" + "| KM rodados: " + v.getKmRodados()
-							+ " |\n" + "| Tipo automovel: " + v.getTipoAutomovel() + " |\n" + "| Tipo combustivel: "
-							+ v.getTipoCombustivel() + " |\n");
+					System.out.println("| Marca: " + v.getMarca() + "    |\n" 
+							+ "| Modelo: " + v.getModelo() + "    |\n"
+							+ "| Ano fabricacao: " + v.getAnoFabricacao() + "    |\n" 
+							+ "| Pneus: " + v.getQtdPneu() + "    |\n" 
+							+ "| Cor: " + v.getCor() + "    |\n" 
+							+ "| Placa: " + v.getPlaca() + "    |\n"
+							+ "| Total donos: " + v.getTotalDonos() + "    |\n" 
+							+ "| KM rodados: " + v.getKmRodados() + "    |\n" 
+							+ "| Tipo automovel: " + v.getTipoAutomovel() + "    |\n" 
+							+ "| Tipo combustivel: " + v.getTipoCombustivel() + "    |\n");
 				}
 				System.out.println("========================\n");
 				break;
