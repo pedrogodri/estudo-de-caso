@@ -26,7 +26,7 @@ public class MainVeiculo {
 			}
 			case 1: {
 //				limparConsole();
-				Veiculo veiculo = new Veiculo();
+				Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
 
 				System.out.println("==================================================\n"
 						+ "| NECESSITAMOS DE ALGUMAS INFORMACOES DO VEICULO |\n"
@@ -71,7 +71,7 @@ public class MainVeiculo {
 			}
 			case 2: {
 //				limparConsole();
-				Veiculo veiculo = new Veiculo();
+				Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
 				Integer alterar = Integer.MAX_VALUE;
 				Boolean encontrou = false;
 				Integer id;
@@ -281,7 +281,7 @@ public class MainVeiculo {
 			}
 			case 3: {
 //				limparConsole();
-				Veiculo veiculo = new Veiculo();
+				Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
 				Integer opcao;
 				Boolean encontrou = false;
 				Integer id;
@@ -322,7 +322,7 @@ public class MainVeiculo {
 			}
 			case 4: {
 //				limparConsole();
-				Veiculo veiculo = new Veiculo();
+				Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE VEICULOS    |\n");
 				for (Veiculo v : listaVeiculos) {
