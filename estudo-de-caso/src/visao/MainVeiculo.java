@@ -1,6 +1,6 @@
 package visao;
 
-import java.io.IOException;
+//import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -344,6 +344,8 @@ public class MainVeiculo {
 				break;
 			}
 		}
+		
+		ler.close();
 
 	}
 
@@ -368,5 +370,5 @@ public class MainVeiculo {
 //				e.printStackTrace();
 //			}
 //	}
-
+	
 }
