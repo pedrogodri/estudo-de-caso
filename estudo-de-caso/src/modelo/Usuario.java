@@ -17,10 +17,6 @@ public class Usuario {
 		this.rg = rg;	
 	}
 	
-	public Usuario() {
-		
-	}
-	
 	public String getNome() {
 		return nome;
 	}
