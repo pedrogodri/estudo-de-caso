@@ -14,6 +14,19 @@ public class Veiculo {
 	private Float kmRodados;
 	private String tipoAutomovel;
 	private String tipoCombustivel;
+	
+	public Veiculo(String marca, String modelo, Integer anoFabricacao, Integer qtdPneu, String cor, String placa, Integer totalDonos, Float kmRodados, String tipoAutomovel, String tipoCombustivel) {
+		this.anoFabricacao = anoFabricacao;
+		this.cor = cor;
+		this.kmRodados = kmRodados;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.placa = placa;
+		this.qtdPneu = qtdPneu;
+		this.tipoAutomovel = tipoAutomovel;
+		this.tipoCombustivel = tipoCombustivel;
+		this.totalDonos = totalDonos;
+	}
 
 
 	public Integer getId() {
