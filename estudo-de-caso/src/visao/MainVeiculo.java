@@ -6,88 +6,133 @@ import java.util.Scanner;
 
 import modelo.Usuario;
 import modelo.Veiculo;
+import controle.UsuarioDAO;
 import controle.VeiculoDAO; 
 
 public class MainVeiculo {
 	public static void main(String[] args) {
-		
-		Scanner ler = new Scanner(System.in);
-		Integer opcaoEscolhida = Integer.MAX_VALUE;
-		ArrayList<Veiculo> listaVeiculos = new ArrayList<Veiculo>();
-		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
-		Integer opcaoEscolhidaUsuario = Integer.MAX_VALUE;
-		Integer opcaoAlterar = Integer.MAX_VALUE;
-		
-		VeiculoDAO opcaoVeiculo = new VeiculoDAO();
-	
-		Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
-		Usuario usuario = new Usuario(null, opcaoEscolhidaUsuario, null, null, null, null, null, null);
+				Scanner ler = new Scanner(System.in);
 
 		
-		while (opcaoEscolhidaUsuario != 0) {
+		//Usuario
+		Integer opcaoEscolhida = Integer.MAX_VALUE;
+	    ArrayList<Veiculo> listaVeiculos = new ArrayList<Veiculo>();
+		Integer opcaoSelecionada = Integer.MAX_VALUE;
+		UsuarioDAO bancoUsuario = UsuarioDAO.getInstanciaUsuario();
+		ArrayList<Usuario> lista = bancoUsuario.listarUsuarios();
+		Usuario u = new Usuario(null, null, null, null, null, null, null, null);
+
+		
+		Integer opcaoAlterar = Integer.MAX_VALUE;
+		VeiculoDAO opcaoVeiculo = new VeiculoDAO();
+		Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
+
+		
+		while (opcaoSelecionada != 0) {
 			System.out.println("==================\n" + 
 					  "| MENU CADASTRO     |\n" 
-					+ "| [0] AVANÇAR       |\n"
+					+ "| [0] AVANCAR       |\n"
 					+ "| [1] CADASTRAR     |\n" 
 					+ "| [2] LISTAR        |\n" + "==================\n");
 			System.out.print("Selecione uma opcao de cadastro acima: ");
-			opcaoEscolhidaUsuario = Integer.valueOf(ler.nextLine());
+			opcaoSelecionada = Integer.valueOf(ler.nextLine());
 			
 			
 			
-			switch (opcaoEscolhidaUsuario) {
+			switch (opcaoSelecionada) {
 			case 0: {
 				break;
 			}
 			case 1: {
-//				limparConsole();
 				System.out.println("==================================================\n"
 						+ "| NECESSITAMOS DE ALGUMAS INFORMACOES PARA O CADASTRO |\n"
 						+ "==================================================\n");
 				System.out.println("-> NOME(Ex:. Rafael): ");
-				usuario.setNome(ler.nextLine());
-				
+				String nome = ler.nextLine();
+				if (!nome.isEmpty()) {
+					u.setNome(String.valueOf(nome));
+				} else {
+					System.out.println("Erro no nome");
+				}
+
 				System.out.println("-> IDADE(Ex:. 18): ");
-				usuario.setIdade(Integer.valueOf(ler.nextLine()));
+				String idade = ler.nextLine();
+				if (!idade.isEmpty()) {
+					u.setIdade(String.valueOf(idade));
+				} else {
+					System.out.println("Erro na Idade");
+				}
 
 				System.out.println("-> CPF(Ex:. 235.673.049-34): ");
-				usuario.setCpf(ler.nextLine());
+				String cpf = ler.nextLine();
+				if (!cpf.isEmpty()) {
+					u.setCpf(String.valueOf(cpf));
+				} else {
+					System.out.println("Erro no Cpf");
+				}
 				
 				System.out.println("-> RG(Ex:. 3.0493.455): \"");
-				usuario.setRg(ler.nextLine());
+				String rg = ler.nextLine();
+				if (!rg.isEmpty()) {
+					u.setRg(String.valueOf(rg));
+				} else {
+					System.out.println("Erro no Rg");
+				}
 				
 				System.out.println("-> Telefone(Ex:. (47) 99049-3479): \"");
-				usuario.setNumTelefone(ler.nextLine());
+				String numTelefone = ler.nextLine();
+				if (!numTelefone.isEmpty()) {
+					u.setNumTelefone(String.valueOf(numTelefone));
+				} else {
+					System.out.println("Erro no Numero de telefone");
+				}
 				
 				System.out.println("-> Email (Ex:. youremail@email.com): \"");
-				usuario.setEmail(ler.nextLine());
-				
+				String email = ler.nextLine();
+				if (!email.isEmpty()) {
+					u.setEmail(String.valueOf(email));
+				} else {
+					System.out.println("Erro no Email");
+				}
+
 				System.out.println("-> CEP (Ex:. 12345-612): \"");
-				usuario.setCep(ler.nextLine());
-				
+				String cep = ler.nextLine();
+				if (!cep.isEmpty()) {
+					u.setCep(String.valueOf(cep));
+				} else {
+					System.out.println("Erro no Cep");
+				}
+
 				System.out.println("-> Sexo (Ex:. Masculino): \"");
-				usuario.setSexo(ler.nextLine());
+				String sexo = ler.nextLine();
+				if (!sexo.isEmpty()) {
+					u.setSexo(String.valueOf(sexo));
+				} else {
+					System.out.println("Erro no Sexo");
+				}
 				
 				System.out.println("===================================================\n");
-
-				listaUsuarios.add(usuario);
+				
+				bancoUsuario.criarUsuario(u);
+				
 				break;
 				
 			}
 			case 2: {
-//				limparConsole();
+				
+				
 	
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE USUARIOS    |\n");
-				for (Usuario u : listaUsuarios) {
-					System.out.println("| Nome: " + u.getNome() + "    |\n" 
-							+ "| Idade: " + u.getIdade() + "    |\n"
-							+ "| CPF: " + u.getCpf() + "    |\n" 
-							+ "| RG: " + u.getRg() + "    |\n" 
-							+ "| Telefone: " + u.getNumTelefone() + "    |\n" 
-							+ "| Email: " + u.getEmail() + "    |\n"
-							+ "| CEP: " + u.getCep() + "    |\n" 
-							+ "| Sexo: " + u.getSexo() + "    |\n" );
+				for (Usuario usuario : lista) {
+					System.out.println("| Nome: " + usuario.getNome() + "    |\n" 
+							+ "| Idade: " + usuario.getIdade() + "    |\n"
+							+ "| CPF: " + usuario.getCpf() + "    |\n" 
+							+ "| RG: " + usuario.getRg() + "    |\n" 
+							+ "| Telefone: " + usuario.getNumTelefone() + "    |\n" 
+							+ "| Email: " + usuario.getEmail() + "    |\n"
+							+ "| CEP: " + usuario.getCep() + "    |\n" 
+							+ "| Sexo: " + usuario.getSexo() + "    |\n" );
 				}
 				System.out.println("========================\n");
 				break;

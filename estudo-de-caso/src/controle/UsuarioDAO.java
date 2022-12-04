@@ -29,19 +29,13 @@ public class UsuarioDAO implements IUsuarioDAO {
 			tabelaUsuario.add(u);
 			return true;
 		}
+		
 		return false;
 	}
 
 	@Override
-	public boolean excluirUsuario(Usuario u, String rg) {
-		for (Usuario usuario : tabelaUsuario) {
-			if (usuario.getRg() == rg) {
-				tabelaUsuario.remove(usuario);
-				return true;
-			}
-		}
-
-		return false;
+	public ArrayList<Usuario> listarUsuarios() {
+		return tabelaUsuario;
 	}
 
 }

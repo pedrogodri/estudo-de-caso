@@ -1,9 +1,11 @@
 package modelo;
 
+import java.util.ArrayList;
+
 public interface IUsuarioDAO {
 	
 	public boolean criarUsuario(Usuario u);
 
-	public boolean excluirUsuario(Usuario u, String rg);
+	public ArrayList<Usuario> listarUsuarios();
 
 }

@@ -2,7 +2,7 @@ package modelo;
 
 public class Usuario {
 	private String nome;
-	private Integer idade;
+	private String idade;
 	private String cpf;
 	private String rg;
 	private String numTelefone; 
@@ -10,7 +10,7 @@ public class Usuario {
 	private String cep;
 	private String sexo; 
 	
-	public Usuario(String nome, Integer idade, String cpf, String rg, 
+	public Usuario(String nome, String idade, String cpf, String rg, 
 	String numTelefone, String email, String cep, String sexo) {
 		this.nome = nome;
 		this.idade = idade;
@@ -29,10 +29,10 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Integer getIdade() {
+	public String getIdade() {
 		return idade;
 	}
-	public void setIdade(Integer idade) {
+	public void setIdade(String idade) {
 		this.idade = idade;
 	}
 	public String getCpf() {
