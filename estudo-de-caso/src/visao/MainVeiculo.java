@@ -16,8 +16,11 @@ public class MainVeiculo {
 		Integer opcaoEscolhidaUsuario = Integer.MAX_VALUE;
 		
 		while (opcaoEscolhidaUsuario != 0) {
-			System.out.println("==================\n" + "| MENU CADASTRO |\n" + "| [0] AVANÇAR       |\n"
-					+ "| [1] CADASTRAR  |\n" + "| [2] LISTAR  |\n" + "==================\n");
+			System.out.println("==================\n" + 
+					  "| MENU CADASTRO     |\n" 
+					+ "| [0] AVANÇAR       |\n"
+					+ "| [1] CADASTRAR     |\n" 
+					+ "| [2] LISTAR        |\n" + "==================\n");
 			System.out.print("Selecione uma opcao de cadastro acima: ");
 			opcaoEscolhidaUsuario = Integer.valueOf(ler.nextLine());
 			
@@ -46,6 +49,8 @@ public class MainVeiculo {
 				System.out.println("-> RG(Ex:. 304934): \"");
 				usuario.setRg(ler.nextLine());
 				
+				System.out.println("-> Telefone(Ex:. 304934): \"");
+				usuario.setNumTelefone(ler.nextLine());
 				
 				System.out.println("-> Email (Ex:. blablabla@dsada.com): \"");
 				usuario.setEmail(ler.nextLine());
@@ -54,7 +59,7 @@ public class MainVeiculo {
 				usuario.setCep(ler.nextLine());
 				
 				System.out.println("-> Sexo (Ex:. Masculino): \"");
-				usuario.setCep(ler.nextLine());
+				usuario.setSexo(ler.nextLine());
 				
 				System.out.println("===================================================\n");
 
