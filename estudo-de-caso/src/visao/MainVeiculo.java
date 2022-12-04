@@ -47,19 +47,19 @@ public class MainVeiculo {
 				System.out.println("-> IDADE(Ex:. 18): ");
 				usuario.setIdade(Integer.valueOf(ler.nextLine()));
 
-				System.out.println("-> CPF(Ex:. 23567304934): ");
+				System.out.println("-> CPF(Ex:. 235.673.049-34): ");
 				usuario.setCpf(ler.nextLine());
 				
-				System.out.println("-> RG(Ex:. 304934): \"");
+				System.out.println("-> RG(Ex:. 3.0493.455): \"");
 				usuario.setRg(ler.nextLine());
 				
-				System.out.println("-> Telefone(Ex:. 304934): \"");
+				System.out.println("-> Telefone(Ex:. (47) 99049-3479): \"");
 				usuario.setNumTelefone(ler.nextLine());
 				
-				System.out.println("-> Email (Ex:. blablabla@dsada.com): \"");
+				System.out.println("-> Email (Ex:. youremail@email.com): \"");
 				usuario.setEmail(ler.nextLine());
 				
-				System.out.println("-> CEP (Ex:. 123456-12): \"");
+				System.out.println("-> CEP (Ex:. 12345-612): \"");
 				usuario.setCep(ler.nextLine());
 				
 				System.out.println("-> Sexo (Ex:. Masculino): \"");
