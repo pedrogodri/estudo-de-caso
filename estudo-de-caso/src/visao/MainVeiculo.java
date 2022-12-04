@@ -14,6 +14,12 @@ public class MainVeiculo {
 		ArrayList<Veiculo> listaVeiculos = new ArrayList<Veiculo>();
 		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 		Integer opcaoEscolhidaUsuario = Integer.MAX_VALUE;
+		Integer opcaoAlterar = Integer.MAX_VALUE;
+	
+		
+		Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
+		Usuario usuario = new Usuario(null, opcaoEscolhidaUsuario, null, null, null, null, null, null);
+
 		
 		while (opcaoEscolhidaUsuario != 0) {
 			System.out.println("==================\n" + 
@@ -32,8 +38,6 @@ public class MainVeiculo {
 			}
 			case 1: {
 //				limparConsole();
-				Usuario usuario = new Usuario(null, opcaoEscolhidaUsuario, null, null, null, null, null, null);
-
 				System.out.println("==================================================\n"
 						+ "| NECESSITAMOS DE ALGUMAS INFORMACOES PARA O CADASTRO |\n"
 						+ "==================================================\n");
@@ -68,7 +72,7 @@ public class MainVeiculo {
 			}
 			case 2: {
 //				limparConsole();
-				Usuario usuario = new Usuario(null, opcaoEscolhidaUsuario, null, null, null, null, null, null);
+	
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE USUARIOS    |\n");
 				for (Usuario u : listaUsuarios) {
@@ -106,7 +110,6 @@ public class MainVeiculo {
 			}
 			case 1: {
 //				limparConsole();
-				Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
 
 				System.out.println("==================================================\n"
 						+ "| NECESSITAMOS DE ALGUMAS INFORMACOES DO VEICULO |\n"
@@ -151,8 +154,7 @@ public class MainVeiculo {
 			}
 			case 2: {
 //				limparConsole();
-				Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
-				Integer alterar = Integer.MAX_VALUE;
+				
 				Boolean encontrou = false;
 				Integer id;
 
@@ -168,8 +170,8 @@ public class MainVeiculo {
 				System.out.println("Selecione o ID do carro para fazer a alteração: ");
 				id = Integer.valueOf(ler.nextLine());
 
-				while (alterar != 0) {
-					Integer opcaoAlterar = Integer.MAX_VALUE;
+				while (opcaoAlterar != 0) {
+	
 					System.out.println("===========================\n" + "|    MENU DE ALTERACAO    |\n"
 							+ "| [0]  SAIR               |\n" + "| [1]  MARCA              |\n"
 							+ "| [2]  MODELO             |\n" + "| [3]  ANO DE FABRICACAO  |\n"
@@ -181,7 +183,7 @@ public class MainVeiculo {
 					System.out.println("Informe o que deseja alterar: ");
 					opcaoAlterar = Integer.valueOf(ler.nextLine());
 
-					switch (opcaoEscolhida) {
+					switch (opcaoAlterar) {
 					case 0: {
 						break;
 					}
@@ -355,13 +357,14 @@ public class MainVeiculo {
 						}
 						break;
 					}
+					default:
+						break;
 					}
-					break;
 				}
+					break;
 			}
 			case 3: {
 //				limparConsole();
-				Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
 				Integer opcao;
 				Boolean encontrou = false;
 				Integer id;
@@ -402,7 +405,6 @@ public class MainVeiculo {
 			}
 			case 4: {
 //				limparConsole();
-				Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE VEICULOS    |\n");
 				for (Veiculo v : listaVeiculos) {
