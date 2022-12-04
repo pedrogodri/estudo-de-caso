@@ -6,17 +6,20 @@ import java.util.Scanner;
 
 import modelo.Usuario;
 import modelo.Veiculo;
+import controle.VeiculoDAO; 
 
 public class MainVeiculo {
 	public static void main(String[] args) {
+		
 		Scanner ler = new Scanner(System.in);
 		Integer opcaoEscolhida = Integer.MAX_VALUE;
 		ArrayList<Veiculo> listaVeiculos = new ArrayList<Veiculo>();
 		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 		Integer opcaoEscolhidaUsuario = Integer.MAX_VALUE;
 		Integer opcaoAlterar = Integer.MAX_VALUE;
-	
 		
+		VeiculoDAO opcaoVeiculo = new VeiculoDAO();
+	
 		Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
 		Usuario usuario = new Usuario(null, opcaoEscolhidaUsuario, null, null, null, null, null, null);
 
@@ -69,6 +72,7 @@ public class MainVeiculo {
 
 				listaUsuarios.add(usuario);
 				break;
+				
 			}
 			case 2: {
 //				limparConsole();
@@ -109,52 +113,12 @@ public class MainVeiculo {
 				break;
 			}
 			case 1: {
-//				limparConsole();
-
-				System.out.println("==================================================\n"
-						+ "| NECESSITAMOS DE ALGUMAS INFORMACOES DO VEICULO |\n"
-						+ "==================================================\n");
-				System.out.println("-> ID(Ex:. 1): ");
-				veiculo.setId(Integer.valueOf(ler.nextLine()));
-				
-				System.out.println("-> MARCA(Ex:. Fiat): ");
-				veiculo.setMarca(ler.nextLine());
-
-				System.out.println("-> MODELO(Ex:. Argo): ");
-				veiculo.setModelo(ler.nextLine());
-
-				System.out.println("-> ANO DE FABRICACAO(Ex:. 2022): ");
-				veiculo.setAnoFabricacao(Integer.valueOf(ler.nextLine()));
-
-				System.out.println("-> QUANTIDADE DE PNEU(Ex:. 4): ");
-				veiculo.setQtdPneu(Integer.valueOf(ler.nextLine()));
-
-				System.out.println("-> COR (Ex:. Branco): ");
-				veiculo.setCor(ler.nextLine());
-
-				System.out.println("-> PLACA(Ex:. AE34F65): ");
-				veiculo.setPlaca(ler.nextLine());
-
-				System.out.println("-> TOTAL DONOS(Ex:. 2): ");
-				veiculo.setTotalDonos(Integer.valueOf(ler.nextLine()));
-
-				System.out.println("-> KMs RODADOS(Ex:. 365.67):");
-				veiculo.setKmRodados(Float.valueOf(ler.nextLine()));
-
-				System.out.println("-> TIPO DO VEICULO(Ex:. SUV): ");
-				veiculo.setTipoAutomovel(ler.nextLine());
-
-				System.out.println("-> COMBUSTIVEL USADO(Ex:. Gasolina): ");
-				veiculo.setTipoCombustivel(ler.nextLine());
-
-				System.out.println("===================================================\n");
-
+				opcaoVeiculo.cadastrarVeiculo(veiculo);
 				listaVeiculos.add(veiculo);
 				break;
 			}
 			case 2: {
 //				limparConsole();
-				
 				Boolean encontrou = false;
 				Integer id;
 
