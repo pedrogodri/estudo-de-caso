@@ -365,6 +365,7 @@ public class MainVeiculo {
 					}
 					break;
 				}
+//				opcaoVeiculo.excluir(veiculo, opcaoEscolhidaUsuario);
 				break;
 			}
 			case 4: {

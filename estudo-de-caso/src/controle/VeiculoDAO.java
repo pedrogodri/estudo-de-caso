@@ -65,8 +65,6 @@ public class VeiculoDAO implements IVeiculoDAO {
 		veiculo.setTipoCombustivel(ler.nextLine());
 
 		System.out.println("===================================================\n");
-
-		
 		
 		return true;
 	}
@@ -78,7 +76,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 		System.out.println("=========================================\n");
 		System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
 
-		for (veiculo : listaVeiculos) {
+		for (Veiculo veiculo : listaVeiculos) {
 			System.out.println("|    " + v.getId() + "    |    "+ v.getMarca() + "    |    " + v.getModelo() + "    |\n");
 			System.out.println("=========================================\n	");
 		}
@@ -282,12 +280,41 @@ public class VeiculoDAO implements IVeiculoDAO {
 
 	@Override
 	public boolean excluir(Veiculo v, Integer id) {
-		for (Veiculo veiculo : listaVeiculos) {
-			if(veiculo.getId() == id) {
-				listaVeiculos.remove(veiculo);
-				return true;
+		Integer opcao;
+		Boolean encontrou = false;
+
+		while (true) {
+			System.out.println("=========================================\n");
+			System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
+
+			for (Veiculo v1 : listaVeiculos) {
+				System.out.println("|    " + v1.getId() + "    |    "+ v1.getMarca() + "    |    " + v1.getModelo() + "    |\n");
 			}
-	}
+			System.out.println("=========================================\n");
+
+			System.out.println("Informe o id do veiculo para excluir: ");
+			id = Integer.valueOf(ler.nextLine());
+
+			if (id.equals(0)) {
+				System.out.println("Você saiu");
+				break;
+			}
+
+			for (Veiculo v1 : listaVeiculos) {
+				if (id.equals(v1.getId())) {
+					encontrou = true;
+					listaVeiculos.remove(v1);
+					System.out.println("Operacao feita com sucesso");
+					break;
+				}
+			}
+
+			if (encontrou == false) {
+				System.out.println("Codigo informado nao existe");
+				break;
+			}
+			break;
+		}
 		return false;
 	}
 
@@ -304,6 +331,23 @@ public class VeiculoDAO implements IVeiculoDAO {
 	
 	@Override
 	public ArrayList<Veiculo> listarVeiculos() {
+		
+//		System.out.println("==========================\n");
+//		System.out.println("|   LISTA DE VEICULOS    |\n");
+//		for (Veiculo loopVeiculo : listaVeiculos) {
+//			System.out.println("| Marca: " + veiculo.getMarca() + "    |\n" 
+//					+ "| Modelo: " + veiculo.getModelo() + "    |\n"
+//					+ "| Ano fabricacao: " + veiculo.getAnoFabricacao() + "    |\n" 
+//					+ "| Pneus: " + veiculo.getQtdPneu() + "    |\n" 
+//					+ "| Cor: " + veiculo.getCor() + "    |\n" 
+//					+ "| Placa: " + veiculo.getPlaca() + "    |\n"
+//					+ "| Total donos: " + veiculo.getTotalDonos() + "    |\n" 
+//					+ "| KM rodados: " + veiculo.getKmRodados() + "    |\n" 
+//					+ "| Tipo automovel: " + veiculo.getTipoAutomovel() + "    |\n" 
+//					+ "| Tipo combustivel: " + veiculo.getTipoCombustivel() + "    |\n");
+//		}
+//		System.out.println("========================\n");
+//		
 		return listaVeiculos;
 	}
 
