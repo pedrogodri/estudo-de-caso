@@ -21,6 +21,7 @@ public class MainVeiculo {
 		UsuarioDAO bancoUsuario = UsuarioDAO.getInstanciaUsuario();
 		ArrayList<Usuario> lista = bancoUsuario.listarUsuarios();
 		Usuario u = new Usuario(null, null, null, null, null, null, null, null);
+		Veiculo v = new Veiculo(null, null, opcaoSelecionada, opcaoSelecionada, null, null, opcaoSelecionada, null, null, null);
 
 		
 		Integer opcaoAlterar = Integer.MAX_VALUE;
@@ -120,8 +121,6 @@ public class MainVeiculo {
 			}
 			case 2: {
 				
-				
-	
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE USUARIOS    |\n");
 				for (Usuario usuario : lista) {
@@ -148,7 +147,7 @@ public class MainVeiculo {
 		while (opcaoEscolhida != 0) {
 			System.out.println("==================\n" + "| MENU PRINCIPAL |\n" + "| [0] SAIR       |\n"
 					+ "| [1] CADASTRAR  |\n" + "| [2] ALTERAR    |\n" + "| [3] EXCLUIR    |\n" + "| [4] LISTAR     |\n"
-					+ "==================\n");
+					+  "| [5]  COMPRAR     |\n" + "==================\n");
 
 			System.out.print("Selecione uma opcao acima: ");
 			opcaoEscolhida = Integer.valueOf(ler.nextLine());
@@ -158,20 +157,19 @@ public class MainVeiculo {
 				break;
 			}
 			case 1: {
-				opcaoVeiculo.cadastrarVeiculo(veiculo);
-				listaVeiculos.add(veiculo);
+				opcaoVeiculo.cadastrarVeiculo(v);
+				listaVeiculos.add(v);
 				break;
 			}
 			case 2: {
-//				limparConsole();
 				Boolean encontrou = false;
 				Integer id;
 
 				System.out.println("=========================================\n");
 				System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
 
-				for (Veiculo v : listaVeiculos) {
-					System.out.println("|    " + v.getId() + "    |    "+ v.getMarca() + "    |    " + v.getModelo() + "    |\n");
+				for (Veiculo v1 : listaVeiculos) {
+					System.out.println("|    " + v1.getId() + "    |    "+ v1.getMarca() + "    |    " + v1.getModelo() + "    |\n");
 					System.out.println("=========================================\n	");
 				}
 
@@ -192,6 +190,7 @@ public class MainVeiculo {
 					System.out.println("Informe o que deseja alterar: ");
 					opcaoAlterar = Integer.valueOf(ler.nextLine());
 
+				
 					switch (opcaoAlterar) {
 					case 0: {
 						break;
@@ -199,10 +198,10 @@ public class MainVeiculo {
 					case 1: {
 						System.out.println("Informe a nova Marca: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setMarca(ler.nextLine());
+								v.setMarca(ler.nextLine());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -216,10 +215,10 @@ public class MainVeiculo {
 					case 2: {
 						System.out.println("Informe o novo Modelo: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setModelo(ler.nextLine());
+								v.setModelo(ler.nextLine());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -233,10 +232,10 @@ public class MainVeiculo {
 					case 3: {
 						System.out.println("Informe o novo Ano de Fabricacao: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setAnoFabricacao(ler.nextInt());
+								v.setAnoFabricacao(ler.nextInt());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -250,10 +249,10 @@ public class MainVeiculo {
 					case 4: {
 						System.out.println("Informe a nova quantidade de Pneu: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setQtdPneu(ler.nextInt());
+								v.setQtdPneu(ler.nextInt());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -267,10 +266,10 @@ public class MainVeiculo {
 					case 5: {
 						System.out.println("Informe a nova Cor: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setCor(ler.nextLine());
+								v.setCor(ler.nextLine());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -284,10 +283,10 @@ public class MainVeiculo {
 					case 6: {
 						System.out.println("Informe a nova Placa: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setPlaca(ler.nextLine());
+								v.setPlaca(ler.nextLine());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -301,10 +300,10 @@ public class MainVeiculo {
 					case 7: {
 						System.out.println("Informe o novo total de Donos: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setTotalDonos(ler.nextInt());
+								v.setTotalDonos(ler.nextInt());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -318,10 +317,10 @@ public class MainVeiculo {
 					case 8: {
 						System.out.println("Informe a nova Quilometragem: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setKmRodados(ler.nextFloat());
+								v.setKmRodados(ler.nextFloat());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -335,10 +334,10 @@ public class MainVeiculo {
 					case 9: {
 						System.out.println("Informe o novo Tipo de Automovel: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setTipoAutomovel(ler.nextLine());
+								v.setTipoAutomovel(ler.nextLine());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -352,10 +351,10 @@ public class MainVeiculo {
 					case 10: {
 						System.out.println("Informe o novo Tipo de Combustivel: ");
 
-						for (Veiculo v : listaVeiculos) {
-							if (id.equals(v.getId())) {
+						for (Veiculo v1 : listaVeiculos) {
+							if (id.equals(v1.getId())) {
 								encontrou = true;
-								veiculo.setTipoCombustivel(ler.nextLine());
+								v.setTipoCombustivel(ler.nextLine());
 								System.out.println("Operacao feita com sucesso");
 								break;
 							}
@@ -382,8 +381,8 @@ public class MainVeiculo {
 					System.out.println("=========================================\n");
 					System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
 
-					for (Veiculo v : listaVeiculos) {
-						System.out.println("|    " + v.getId() + "    |    "+ v.getMarca() + "    |    " + v.getModelo() + "    |\n");
+					for (Veiculo v1 : listaVeiculos) {
+						System.out.println("|    " + v1.getId() + "    |    "+ v1.getMarca() + "    |    " + v1.getModelo() + "    |\n");
 					}
 					System.out.println("=========================================\n");
 
@@ -395,10 +394,10 @@ public class MainVeiculo {
 						break;
 					}
 
-					for (Veiculo v : listaVeiculos) {
-						if (id.equals(v.getId())) {
+					for (Veiculo v1 : listaVeiculos) {
+						if (id.equals(v1.getId())) {
 							encontrou = true;
-							listaVeiculos.remove(v);
+							listaVeiculos.remove(v1);
 							System.out.println("Operacao feita com sucesso");
 							break;
 						}
@@ -417,50 +416,71 @@ public class MainVeiculo {
 //				limparConsole();
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE VEICULOS    |\n");
-				for (Veiculo v : listaVeiculos) {
-					System.out.println("| Marca: " + v.getMarca() + "    |\n" 
-							+ "| Modelo: " + v.getModelo() + "    |\n"
-							+ "| Ano fabricacao: " + v.getAnoFabricacao() + "    |\n" 
-							+ "| Pneus: " + v.getQtdPneu() + "    |\n" 
-							+ "| Cor: " + v.getCor() + "    |\n" 
-							+ "| Placa: " + v.getPlaca() + "    |\n"
-							+ "| Total donos: " + v.getTotalDonos() + "    |\n" 
-							+ "| KM rodados: " + v.getKmRodados() + "    |\n" 
-							+ "| Tipo automovel: " + v.getTipoAutomovel() + "    |\n" 
-							+ "| Tipo combustivel: " + v.getTipoCombustivel() + "    |\n");
+				for (Veiculo v1 : listaVeiculos) {
+					System.out.println("| Marca: " + v1.getMarca() + "    |\n" 
+							+ "| Modelo: " + v1.getModelo() + "    |\n"
+							+ "| Ano fabricacao: " + v1.getAnoFabricacao() + "    |\n" 
+							+ "| Pneus: " + v1.getQtdPneu() + "    |\n" 
+							+ "| Cor: " + v1.getCor() + "    |\n" 
+							+ "| Placa: " + v1.getPlaca() + "    |\n"
+							+ "| Total donos: " + v1.getTotalDonos() + "    |\n" 
+							+ "| KM rodados: " + v1.getKmRodados() + "    |\n" 
+							+ "| Tipo automovel: " + v1.getTipoAutomovel() + "    |\n" 
+							+ "| Tipo combustivel: " + v1.getTipoCombustivel() + "    |\n");
 				}
 				System.out.println("========================\n");
 				break;
 			}
-			default:
+			case 5: {
+				Integer opcao;
+				Boolean encontrou = false;
+				Integer id;
+
+				while (true) {
+					System.out.println("=========================================\n");
+					System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
+
+					for (Veiculo v1 : listaVeiculos) {
+						System.out.println("|    " + v1.getId() + "    |    "+ v1.getMarca() + "    |    " + v1.getModelo() + "    |\n");
+					}
+					System.out.println("=========================================\n");
+
+					System.out.println("Informe o id do veiculo para comprar: ");
+					id = Integer.valueOf(ler.nextLine());
+
+					if (id.equals(0)) {
+						System.out.println("Você saiu");
+						break;
+					}
+
+					for (Veiculo v1 : listaVeiculos) {
+						if (id.equals(v1.getId())) {
+							encontrou = true;
+							listaVeiculos.remove(v1);
+							System.out.println("Operacao feita com sucesso");
+							break;
+						}
+					}
+
+					if (encontrou == false) {
+						System.out.println("Codigo informado nao existe");
+						break;
+					}
+					break;
+				}
 				break;
 			}
+			
+			default: 
+				break;
+			}
+			
 		}
 		
 		ler.close();
 
 	}
 
-//	public static void limparConsole()
-//	{
-//		Scanner scanner = new Scanner(System.in);
-//        String texto = scanner.next();
-//
-//        //Limpa a tela no windows, no linux e no MacOS
-//        if (System.getProperty("os.name").contains("Windows"))
-//			try {
-//				new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-//			} catch (InterruptedException | IOException e1) {
-//				// TODO Auto-generated catch block
-//				e1.printStackTrace();
-//			}
-//		else
-//			try {
-//				Runtime.getRuntime().exec("clear");
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//	}
+
 	
 }
