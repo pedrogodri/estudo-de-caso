@@ -72,7 +72,7 @@ public class MainVeiculo {
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE USUARIOS    |\n");
 				for (Usuario u : listaUsuarios) {
-					System.out.println("| Nome: " + u.getCep() + "    |\n" 
+					System.out.println("| Nome: " + u.getNome() + "    |\n" 
 							+ "| Idade: " + u.getIdade() + "    |\n"
 							+ "| CPF: " + u.getCpf() + "    |\n" 
 							+ "| RG: " + u.getRg() + "    |\n" 
