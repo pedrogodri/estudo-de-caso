@@ -1,29 +1,23 @@
 package modelo;
 
-import java.util.Date;
-
 public class Usuario {
 	private String nome;
 	private Integer idade;
 	private String cpf;
-	private Date dataNascimento;
 	private String rg;
 	private String numTelefone; 
 	private String email; 
-	private Integer ddd; 
 	private String cep;
 	private String sexo; 
 	
-	public Usuario(String nome, Integer idade, String cpf, Date dataNascimento, String rg, 
-	String numTelefone, String email, Integer ddd, String cep, String sexo) {
+	public Usuario(String nome, Integer idade, String cpf, String rg, 
+	String numTelefone, String email, String cep, String sexo) {
 		this.nome = nome;
 		this.idade = idade;
 		this.cpf = cpf;
-		this.dataNascimento = dataNascimento;
 		this.rg = rg;	
 		this.numTelefone = numTelefone; 
 		this.email = email;
-		this.ddd = ddd; 
 		this.cep = cep;
 		this.sexo = sexo; 
 		
@@ -46,12 +40,6 @@ public class Usuario {
 	}
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
-	}
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
 	}
 	public String getRg() {
 		return rg;
@@ -76,13 +64,6 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public Integer getDdd() {
-		return ddd;
-	}
-
-	public void setDdd(Integer ddd) {
-		this.ddd = ddd;
-	}
 
 	public String getCep() {
 		return cep;
