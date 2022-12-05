@@ -3,6 +3,10 @@ package visao;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import modelo.Caminhao;
+import modelo.Carro;
+import modelo.Moto;
+import modelo.Onibus;
 import modelo.Usuario;
 import modelo.Veiculo;
 import controle.UsuarioDAO;
@@ -27,6 +31,11 @@ public class MainVeiculo {
 		ArrayList<Veiculo> listaVeiculos = new ArrayList<Veiculo>();
 		Veiculo v = new Veiculo(null, null, opcaoSelecionada, opcaoSelecionada, null, null, opcaoSelecionada, null,
 				null, null);
+		Moto m = new Moto(null, null, opcaoAlterar, opcaoAlterar, null, null, opcaoAlterar, null, null, null);
+		Carro c = new Carro(null, null, opcaoAlterar, opcaoAlterar, null, null, opcaoAlterar, null, null, null);
+		Onibus o = new Onibus(null, null, opcaoAlterar, opcaoAlterar, null, null, opcaoAlterar, null, null, null);
+		Caminhao ca = new Caminhao(null, null, opcaoAlterar, opcaoAlterar, null, null, opcaoAlterar, null, null, null);
+		
 		VeiculoDAO opcaoVeiculo = new VeiculoDAO();
 		Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null,
 				null, null);
@@ -200,7 +209,7 @@ public class MainVeiculo {
 			
 			//CADASTRAR - VEICULO
 			case 1: {
-				opcaoVeiculo.cadastrarVeiculo(v);
+				opcaoVeiculo.cadastrarVeiculo(v,c,m,o,ca);
 				listaVeiculos.add(v);
 				break;
 			}
@@ -470,8 +479,10 @@ public class MainVeiculo {
 							+ v1.getQtdPneu() + "    |\n" + "| Cor: " + v1.getCor() + "    |\n" + "| Placa: "
 							+ v1.getPlaca() + "    |\n" + "| Total donos: " + v1.getTotalDonos() + "    |\n"
 							+ "| KM rodados: " + v1.getKmRodados() + "    |\n" + "| Tipo automovel: "
-							+ v1.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + v1.getTipoCombustivel()
-							+ "    |\n");
+							+ v1.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + v1.getTipoCombustivel() + "    |\n" 
+							+ "| Numero portas: " + c.getNumeroPortas() + "    |\n" + "| Numero bancos: "  + c.getNumeroBancos() + "    |\n" 
+							+ "| Airbag: " + c.getAirBag() + "    |\n" + "| Ar condicionado: "  + c.getArCodicionado() + "    |\n" +  "| Cavalos: " +  c.getCavalosMotor() + "    |\n" +
+							"| Numero de rodas: " + m.getNumeroRodas() + "    |\n" + "| Numero de cilindros: " + m.getCilindroMoto() + "    |\n" + "| Bagageiro: " + m.getBagageiro() + "    |\n" + "| Quantidade de assentos: "  + o.getQuantidadeAssentos() + "    |\n" + "| Quantidade de peso: "  + ca.getQuantidadePeso() +  "|\n");
 				}
 				System.out.println("========================\n");
 				break;

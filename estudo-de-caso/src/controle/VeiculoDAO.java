@@ -3,7 +3,11 @@ package controle;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import modelo.Caminhao;
+import modelo.Carro;
 import modelo.IVeiculoDAO;
+import modelo.Moto;
+import modelo.Onibus;
 import modelo.Veiculo;
 
 public class VeiculoDAO implements IVeiculoDAO {
@@ -27,7 +31,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 	
 	
 	@Override
-	public boolean cadastrarVeiculo(Veiculo v) {
+	public boolean cadastrarVeiculo(Veiculo v, Carro c, Moto m, Onibus o, Caminhao ca) {
 		System.out.println("==================================================\n"
 				+ "| NECESSITAMOS DE ALGUMAS INFORMACOES DO VEICULO |\n"
 				+ "==================================================\n");
@@ -38,6 +42,89 @@ public class VeiculoDAO implements IVeiculoDAO {
 		} else {
 			System.out.println("Erro no id");
 		}
+		
+		System.out.println("->TIPO VEICULO(Ex:. Moto, Carro, Onibus");
+		String tipoV = ler.nextLine();
+		
+		switch (tipoV) {
+		case "Moto":{
+			System.out.println("-> NUMERO DE RODAS(Ex:. 2): ");
+			 Integer rodas = Integer.valueOf(ler.nextLine());
+				m.setNumeroRodas(rodas);
+				
+				
+			System.out.println("-> CILINDROS(Ex:. 200): ");
+			 Integer cilindros = Integer.valueOf(ler.nextLine());
+				m.setCilindroMoto(cilindros);
+				
+				
+			System.out.println("-> Bagageiro(Ex:. Sim ou Nao): ");
+				String bagageiro = ler.nextLine();
+				String sim = "Sim";
+				if ((bagageiro.equals(sim)) == true ){
+						 m.setBagageiro(true);
+				} else {
+					m.setBagageiro(false);
+				}
+				
+		
+			
+			break;
+		}
+			
+		case "Caminhao":{
+			System.out.println("-> QUANTIDADE DE PESO(Ex:. 30000): ");
+			 Integer peso = Integer.valueOf(ler.nextLine());
+				ca.setQuantidadePeso(peso);
+			
+			break;
+		}
+		
+		case "Onibus":{
+			System.out.println("-> QUANTIDADE DE ASSENTOS(Ex:. 12): ");
+			 Integer assento = Integer.valueOf(ler.nextLine());
+				o.setQuantidadeAssentos(assento);
+			break;
+		}
+		case "Carro":{
+			System.out.println("-> QUANTIDADE DE PORTAS(Ex:. 4): ");
+			 Integer portas = Integer.valueOf(ler.nextLine());
+				c.setNumeroPortas(portas);
+				
+				System.out.println("-> QUANTIDADE DE BANCOS(Ex:. 4): ");
+				 Integer bancos = Integer.valueOf(ler.nextLine());
+					c.setNumeroBancos(bancos);
+					
+					System.out.println("-> POSSUI AIRBAG(Ex:. Sim ou Nao): ");
+					 String airbag = ler.nextLine();
+						String s = "Sim";
+						if ((airbag.equals(s)) == true ){
+								 c.setAirBag(true);
+						} else {
+							c.setAirBag(false);
+						}
+						
+						System.out.println("-> POSSUI ARCONDICIONADO(Ex:. Sim ou Nao): ");
+						 String ar = ler.nextLine();
+							String ss = "Sim";
+							if ((ar.equals(ss)) == true){
+									 c.setArCodicionado(true);
+							} else {
+								c.setArCodicionado(false);
+							}
+							
+							System.out.println("-> QUANTIDADE DE CAVALOS(Ex:. 4): ");
+							 Integer cavalos = Integer.valueOf(ler.nextLine());
+								c.setCavalosMotor(cavalos);
+						
+			
+			break;
+		}
+		default: {
+			break;
+		}
+		}
+			
 		
 		System.out.println("-> MARCA(Ex:. Fiat): ");
 		String marca = ler.nextLine();
