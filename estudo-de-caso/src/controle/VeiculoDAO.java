@@ -506,14 +506,56 @@ public class VeiculoDAO implements IVeiculoDAO {
 	}
 
 	@Override
-	public boolean comprar(Veiculo v, Integer id) {
-		for (Veiculo veiculo : listaVeiculos) {
-			if (veiculo.getId() == id) {
-				listaVeiculos.remove(v);
-				return true;
+	public void comprar() {
+		Integer opcao, id;
+		Boolean encontrou = false;
+
+		while (true) {
+			System.out.println("=========================================\n");
+			System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
+
+			
+			for (Carro c : listaCarros) {
+				System.out.println("|    " + c.getId() + "    |    " + c.getMarca() + "    |    "
+						+ c.getModelo() + "    |\n");
 			}
+			for (Moto m : listaMotos) {
+				System.out.println("|    " + m.getId() + "    |    " + m.getMarca() + "    |    "
+						+ m.getModelo() + "    |\n");
+			}
+			for (Caminhao ca : listaCaminhao) {
+				System.out.println("|    " + ca.getId() + "    |    " + ca.getMarca() + "    |    "
+						+ ca.getModelo() + "    |\n");
+			}
+			for (Onibus o : listaOnibus) {
+				System.out.println("|    " + o.getId() + "    |    " + o.getMarca() + "    |    "
+						+ o.getModelo() + "    |\n");
+			}
+			System.out.println("=========================================\n");
+
+			System.out.println("Informe o id do veiculo para comprar: ");
+			id = Integer.valueOf(ler.nextLine());
+
+			if (id.equals(0)) {
+				System.out.println("Você saiu");
+				break;
+			}
+
+			for (Veiculo v1 : listaVeiculos) {
+				if (id.equals(v1.getId())) {
+					encontrou = true;
+					listaVeiculos.remove(v1);
+					System.out.println("Operacao feita com sucesso");
+					break;
+				}
+			}
+
+			if (encontrou == false) {
+				System.out.println("Codigo informado nao existe");
+				break;
+			}
+			break;
 		}
-		return false;
 	}
 
 	@Override
@@ -587,6 +629,12 @@ public class VeiculoDAO implements IVeiculoDAO {
 	public boolean alterar(Veiculo v, Integer id) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public void comprar(Veiculo v, Integer id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

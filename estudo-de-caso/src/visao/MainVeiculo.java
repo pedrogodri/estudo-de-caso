@@ -220,216 +220,216 @@ public class MainVeiculo {
 			}
 			
 			//ALTERAR VEICULO
-			case 2: {
-				Boolean encontrou = false;
-				Integer id;
-
-				System.out.println("=========================================\n");
-				System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
-
-				for (Veiculo v1 : listaVeiculos) {
-					System.out.println("|    " + v1.getId() + "    |    " + v1.getMarca() + "    |    " + v1.getModelo()
-							+ "    |\n");
-					System.out.println("=========================================\n	");
-				}
-
-				System.out.println("=========================================\n");
-				System.out.println(u.getNome() + ", selecione o ID do carro para fazer a alteração: ");
-				id = Integer.valueOf(ler.nextLine());
-
-				while (opcaoAlterar != 0) {
-
-					System.out.println("===========================\n" + "|    MENU DE ALTERACAO    |\n"
-							+ "| [0]  Sair               |\n" + "| [1]  Marca              |\n"
-							+ "| [2]  Modelo             |\n" + "| [3]  Ano de fabricacao  |\n"
-							+ "| [4]  Quantidade de pneu |\n" + "| [5]  Cor                |\n"
-							+ "| [6]  Placa              |\n" + "| [7]  Total donos        |\n"
-							+ "| [8]  KMs rodados        |\n" + "| [9]  Tipo veiculo       |\n"
-							+ "| [10] Combustivel usado  |\n" + "===========================\n");
-
-					System.out.println(u.getNome() + ", informe o que deseja alterar: ");
-					opcaoAlterar = Integer.valueOf(ler.nextLine());
-
-					switch (opcaoAlterar) {
-					case 0: {
-						break;
-					}
-					case 1: {
-						System.out.println(u.getNome() + ", informe a nova Marca: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setMarca(ler.nextLine());
-								System.out.println(u.getNome() + ", operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", codigo informado nao existe");
-						}
-						break;
-					}
-					case 2: {
-						System.out.println(u.getNome() + ", informe o novo Modelo: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setModelo(ler.nextLine());
-								System.out.println(u.getNome() + ", sua operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", seu codigo informado nao existe");
-						}
-						break;
-					}
-					case 3: {
-						System.out.println(u.getNome() + ", informe o novo Ano de Fabricacao: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setAnoFabricacao(ler.nextInt());
-								System.out.println(u.getNome() + ", Operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", codigo informado nao existe");
-						}
-						break;
-					}
-					case 4: {
-						System.out.println(u.getNome() + ", informe a nova quantidade de Pneu: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setQtdPneu(ler.nextInt());
-								System.out.println(u.getNome() + ", Operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", codigo informado nao existe");
-						}
-						break;
-					}
-					case 5: {
-						System.out.println(u.getNome() + ", informe a nova Cor: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setCor(ler.nextLine());
-								System.out.println(u.getNome() + ", operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", codigo informado nao existe");
-						}
-						break;
-					}
-					case 6: {
-						System.out.println(u.getNome() + ", informe a nova Placa: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setPlaca(ler.nextLine());
-								System.out.println(u.getNome() + ", operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", codigo informado nao existe");
-						}
-						break;
-					}
-					case 7: {
-						System.out.println(u.getNome() + ", informe o novo total de Donos: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setTotalDonos(ler.nextInt());
-								System.out.println(u.getNome() + ", operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", codigo informado nao existe");
-						}
-						break;
-					}
-					case 8: {
-						System.out.println(u.getNome() + ", informe a nova Quilometragem: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setKmRodados(ler.nextFloat());
-								System.out.println(u.getNome() + ", operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", codigo informado nao existe");
-						}
-						break;
-					}
-					case 9: {
-						System.out.println(u.getNome() + ", informe o novo Tipo de Automovel: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setTipoAutomovel(ler.nextLine());
-								System.out.println(u.getNome() + ", operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", codigo informado nao existe");
-						}
-						break;
-					}
-					case 10: {
-						System.out.println(u.getNome() + ", informe o novo Tipo de Combustivel: ");
-
-						for (Veiculo v1 : listaVeiculos) {
-							if (id.equals(v1.getId())) {
-								encontrou = true;
-								v.setTipoCombustivel(ler.nextLine());
-								System.out.println(u.getNome() + ", operacao feita com sucesso");
-								break;
-							}
-						}
-
-						if (encontrou == false) {
-							System.out.println(u.getNome() + ", codigo informado nao existe");
-						}
-						break;
-					}
-					default:
-						break;
-					}
-				}
-				break;
-			}
+//			case 2: {
+//				Boolean encontrou = false;
+//				Integer id;
+//
+//				System.out.println("=========================================\n");
+//				System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
+//
+//				for (Veiculo v1 : listaVeiculos) {
+//					System.out.println("|    " + v1.getId() + "    |    " + v1.getMarca() + "    |    " + v1.getModelo()
+//							+ "    |\n");
+//					System.out.println("=========================================\n	");
+//				}
+//
+//				System.out.println("=========================================\n");
+//				System.out.println(u.getNome() + ", selecione o ID do carro para fazer a alteração: ");
+//				id = Integer.valueOf(ler.nextLine());
+//
+//				while (opcaoAlterar != 0) {
+//
+//					System.out.println("===========================\n" + "|    MENU DE ALTERACAO    |\n"
+//							+ "| [0]  Sair               |\n" + "| [1]  Marca              |\n"
+//							+ "| [2]  Modelo             |\n" + "| [3]  Ano de fabricacao  |\n"
+//							+ "| [4]  Quantidade de pneu |\n" + "| [5]  Cor                |\n"
+//							+ "| [6]  Placa              |\n" + "| [7]  Total donos        |\n"
+//							+ "| [8]  KMs rodados        |\n" + "| [9]  Tipo veiculo       |\n"
+//							+ "| [10] Combustivel usado  |\n" + "===========================\n");
+//
+//					System.out.println(u.getNome() + ", informe o que deseja alterar: ");
+//					opcaoAlterar = Integer.valueOf(ler.nextLine());
+//
+//					switch (opcaoAlterar) {
+//					case 0: {
+//						break;
+//					}
+//					case 1: {
+//						System.out.println(u.getNome() + ", informe a nova Marca: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setMarca(ler.nextLine());
+//								System.out.println(u.getNome() + ", operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					case 2: {
+//						System.out.println(u.getNome() + ", informe o novo Modelo: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setModelo(ler.nextLine());
+//								System.out.println(u.getNome() + ", sua operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", seu codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					case 3: {
+//						System.out.println(u.getNome() + ", informe o novo Ano de Fabricacao: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setAnoFabricacao(ler.nextInt());
+//								System.out.println(u.getNome() + ", Operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					case 4: {
+//						System.out.println(u.getNome() + ", informe a nova quantidade de Pneu: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setQtdPneu(ler.nextInt());
+//								System.out.println(u.getNome() + ", Operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					case 5: {
+//						System.out.println(u.getNome() + ", informe a nova Cor: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setCor(ler.nextLine());
+//								System.out.println(u.getNome() + ", operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					case 6: {
+//						System.out.println(u.getNome() + ", informe a nova Placa: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setPlaca(ler.nextLine());
+//								System.out.println(u.getNome() + ", operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					case 7: {
+//						System.out.println(u.getNome() + ", informe o novo total de Donos: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setTotalDonos(ler.nextInt());
+//								System.out.println(u.getNome() + ", operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					case 8: {
+//						System.out.println(u.getNome() + ", informe a nova Quilometragem: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setKmRodados(ler.nextFloat());
+//								System.out.println(u.getNome() + ", operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					case 9: {
+//						System.out.println(u.getNome() + ", informe o novo Tipo de Automovel: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setTipoAutomovel(ler.nextLine());
+//								System.out.println(u.getNome() + ", operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					case 10: {
+//						System.out.println(u.getNome() + ", informe o novo Tipo de Combustivel: ");
+//
+//						for (Veiculo v1 : listaVeiculos) {
+//							if (id.equals(v1.getId())) {
+//								encontrou = true;
+//								v.setTipoCombustivel(ler.nextLine());
+//								System.out.println(u.getNome() + ", operacao feita com sucesso");
+//								break;
+//							}
+//						}
+//
+//						if (encontrou == false) {
+//							System.out.println(u.getNome() + ", codigo informado nao existe");
+//						}
+//						break;
+//					}
+//					default:
+//						break;
+//					}
+//				}
+//				break;
+//			}
 			
 			//EXCLUIR VEICULO
 			case 3: {
@@ -481,43 +481,7 @@ public class MainVeiculo {
 			
 			//COMPRAR VEICULO
 			case 5: {
-				Integer opcao;
-				Boolean encontrou = false;
-				Integer id;
-
-				while (true) {
-					System.out.println("=========================================\n");
-					System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
-
-					for (Veiculo v1 : listaVeiculos) {
-						System.out.println("|    " + v1.getId() + "    |    " + v1.getMarca() + "    |    "
-								+ v1.getModelo() + "    |\n");
-					}
-					System.out.println("=========================================\n");
-
-					System.out.println(u.getNome() + ", informe o id do veiculo para comprar: ");
-					id = Integer.valueOf(ler.nextLine());
-
-					if (id.equals(0)) {
-						System.out.println(u.getNome() + " saiu");
-						break;
-					}
-
-					for (Veiculo v1 : listaVeiculos) {
-						if (id.equals(v1.getId())) {
-							encontrou = true;
-							listaVeiculos.remove(v1);
-							System.out.println(u.getNome() + ", operacao feita com sucesso");
-							break;
-						}
-					}
-
-					if (encontrou == false) {
-						System.out.println(u.getNome() + ", codigo informado nao existe");
-						break;
-					}
-					break;
-				}
+				opcaoVeiculo.comprar();
 				break;
 			}
 

@@ -10,8 +10,10 @@ public interface IVeiculoDAO {
     
     public boolean excluir(Veiculo v, Integer id);
     
-    public boolean comprar(Veiculo v, Integer id);
+    public void comprar(Veiculo v, Integer id);
     
 	public void listarVeiculos();
+
+	void comprar();
 	
 }
