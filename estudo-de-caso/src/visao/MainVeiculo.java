@@ -223,7 +223,7 @@ public class MainVeiculo {
 					System.out.println("Erro no id");
 				}
 				
-				System.out.println("->TIPO VEICULO(Ex:. Moto, Carro, Onibus");
+				System.out.println("->TIPO VEICULO(Ex:. Moto, Carro, Onibus ou Caminhao)");
 				String tipoV = ler.nextLine();
 				
 				switch (tipoV) {
@@ -661,7 +661,7 @@ public class MainVeiculo {
 							+ veiculos.getQtdPneu() + "    |\n" + "| Cor: " + veiculos.getCor() + "    |\n" + "| Placa: "
 							+ veiculos.getPlaca() + "    |\n" + "| Total donos: " + veiculos.getTotalDonos() + "    |\n"
 							+ "| KM rodados: " + veiculos.getKmRodados() + "    |\n" + "| Tipo automovel: "
-							+ veiculos.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + veiculos.getTipoCombustivel() + "    |\n"  + m.getNumeroRodas() + "    |\n" + "| Numero de cilindros: " + m.getCilindroMoto() + "    |\n" + "| Bagageiro: " + m.getBagageiro() + "    |\n" +  "|\n");
+							+ veiculos.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + veiculos.getTipoCombustivel() + "| Numero de rodas:   " +  "    |\n"  + m.getNumeroRodas() + "    |\n" + "| Numero de cilindros: " + m.getCilindroMoto() + "    |\n" + "| Bagageiro: " + m.getBagageiro() + "    |\n" +  "|\n");
 				}
 				System.out.println("========================\n");
 				}
@@ -679,6 +679,36 @@ public class MainVeiculo {
 								+ "| Numero portas: " + c.getNumeroPortas() + "    |\n" + "| Numero bancos: "  + c.getNumeroBancos() + "    |\n" 
 								+ "| Airbag: " + c.getAirBag() + "    |\n" + "| Ar condicionado: "  + c.getArCodicionado() + "    |\n" +  "| Cavalos: " +  c.getCavalosMotor() + "    |\n" +
 								"| Numero de rodas: " + "|\n");
+					}
+					System.out.println("========================\n");
+					}
+				
+				if (caminhao1 != 0) {
+					System.out.println("==========================\n");
+					System.out.println("|   LISTA DE VEICULOS    |\n");
+					for (Veiculo v2 : listaVeiculos) {
+						System.out.println("| Marca: " + v2.getMarca() + "    |\n" + "| Modelo: " + v2.getModelo()
+								+ "    |\n" + "| Ano fabricacao: " + v2.getAnoFabricacao() + "    |\n" + "| Pneus: "
+								+ v2.getQtdPneu() + "    |\n" + "| Cor: " + v2.getCor() + "    |\n" + "| Placa: "
+								+ v2.getPlaca() + "    |\n" + "| Total donos: " + v2.getTotalDonos() + "    |\n"
+								+ "| KM rodados: " + v2.getKmRodados() + "    |\n" + "| Tipo automovel: "
+								+ v2.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + v2.getTipoCombustivel()
+								 + "    |\n" + "| Quantidade peso: "  + ca.getQuantidadePeso()  +  "|\n");
+					}
+					System.out.println("========================\n");
+					}
+				
+				if (onibus1 != 0) {
+					System.out.println("==========================\n");
+					System.out.println("|   LISTA DE VEICULOS    |\n");
+					for (Veiculo v2 : listaVeiculos) {
+						System.out.println("| Marca: " + v2.getMarca() + "    |\n" + "| Modelo: " + v2.getModelo()
+								+ "    |\n" + "| Ano fabricacao: " + v2.getAnoFabricacao() + "    |\n" + "| Pneus: "
+								+ v2.getQtdPneu() + "    |\n" + "| Cor: " + v2.getCor() + "    |\n" + "| Placa: "
+								+ v2.getPlaca() + "    |\n" + "| Total donos: " + v2.getTotalDonos() + "    |\n"
+								+ "| KM rodados: " + v2.getKmRodados() + "    |\n" + "| Tipo automovel: "
+								+ v2.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + v2.getTipoCombustivel() + "    |\n" 
+								 + "| Acentos: "  + o.getQuantidadeAssentos()  + "|\n");
 					}
 					System.out.println("========================\n");
 					}
