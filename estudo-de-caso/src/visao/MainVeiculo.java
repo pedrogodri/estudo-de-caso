@@ -1,51 +1,51 @@
 package visao;
 
-//import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import modelo.Usuario;
 import modelo.Veiculo;
 import controle.UsuarioDAO;
-import controle.VeiculoDAO; 
+import controle.VeiculoDAO;
 
 public class MainVeiculo {
 	public static void main(String[] args) {
-				Scanner ler = new Scanner(System.in);
+		Scanner ler = new Scanner(System.in);
 
-		
-		//USUARIO
+		// USUARIO
 		UsuarioDAO bancoUsuario = UsuarioDAO.getInstanciaUsuario();
 		ArrayList<Usuario> lista = bancoUsuario.listarUsuarios();
 		Usuario u = new Usuario(null, null, null, null, null, null, null, null);
 
-		//MENU
+		// MENU
 		Integer opcaoEscolhida = Integer.MAX_VALUE;
 		Integer opcaoSelecionada = Integer.MAX_VALUE;
 		Integer opcaoAlterar = Integer.MAX_VALUE;
 
-		//VEICULO
+		// VEICULO
 		ArrayList<Veiculo> listaVeiculos = new ArrayList<Veiculo>();
-		Veiculo v = new Veiculo(null, null, opcaoSelecionada, opcaoSelecionada, null, null, opcaoSelecionada, null, null, null);
+		Veiculo v = new Veiculo(null, null, opcaoSelecionada, opcaoSelecionada, null, null, opcaoSelecionada, null,
+				null, null);
 		VeiculoDAO opcaoVeiculo = new VeiculoDAO();
-		Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null, null, null);
+		Veiculo veiculo = new Veiculo(null, null, opcaoEscolhida, opcaoEscolhida, null, null, opcaoEscolhida, null,
+				null, null);
 
-		
+		// MENU CADDASTRO - USUARIO
 		while (opcaoSelecionada != 0) {
-			System.out.println("==================\n" + 
-					  "| MENU CADASTRO     |\n" 
-					+ "| [0] Avancar       |\n"
-					+ "| [1] Cadastrar     |\n" 
-					+ "| [2] Listar        |\n" + "==================\n");
+			System.out.println("==================\n" + "| MENU CADASTRO     |\n" + "| [0] Avancar       |\n"
+					+ "| [1] Cadastrar     |\n" + "| [2] Listar        |\n" + "==================\n");
 			System.out.print("Selecione uma opcao de cadastro acima: ");
 			opcaoSelecionada = Integer.valueOf(ler.nextLine());
-			
-			
-			
+
 			switch (opcaoSelecionada) {
-			case 0: {
+
+			//AVANCAR
+			case 0:
+			default: {
 				break;
 			}
+			
+			//CADASTRAR - USUARIO
 			case 1: {
 				System.out.println("==================================================\n"
 						+ "| NECESSITAMOS DE ALGUMAS INFORMACOES PARA O CADASTRO |\n"
@@ -73,7 +73,7 @@ public class MainVeiculo {
 				} else {
 					System.out.println("Erro no Cpf");
 				}
-				
+
 				System.out.println("-> RG(Ex:. 3.0493.455): \"");
 				String rg = ler.nextLine();
 				if (!rg.isEmpty()) {
@@ -81,7 +81,7 @@ public class MainVeiculo {
 				} else {
 					System.out.println("Erro no Rg");
 				}
-				
+
 				System.out.println("-> Telefone(Ex:. (47) 99049-3479): \"");
 				String numTelefone = ler.nextLine();
 				if (!numTelefone.isEmpty()) {
@@ -89,7 +89,7 @@ public class MainVeiculo {
 				} else {
 					System.out.println("Erro no Numero de telefone");
 				}
-				
+
 				System.out.println("-> E-mail (Ex:. youremail@email.com): \"");
 				String email = ler.nextLine();
 				if (!email.isEmpty()) {
@@ -113,43 +113,40 @@ public class MainVeiculo {
 				} else {
 					System.out.println("Erro no Sexo");
 				}
-				
+
 				System.out.println("===================================================\n");
-				
+
 				bancoUsuario.criarUsuario(u);
-				
+
 				break;
-				
+
 			}
+			
+			//LISTAR - USUARIO
 			case 2: {
-				
+
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE USUARIOS    |\n");
 				for (Usuario usuario : lista) {
-					System.out.println("| Nome: " + usuario.getNome() + "    |\n" 
-							+ "| Idade: " + usuario.getIdade() + "    |\n"
-							+ "| CPF: " + usuario.getCpf() + "    |\n" 
-							+ "| RG: " + usuario.getRg() + "    |\n" 
-							+ "| Telefone: " + usuario.getNumTelefone() + "    |\n" 
-							+ "| Email: " + usuario.getEmail() + "    |\n"
-							+ "| CEP: " + usuario.getCep() + "    |\n" 
-							+ "| Sexo: " + usuario.getSexo() + "    |\n" );
+					System.out.println("| Nome: " + usuario.getNome() + "    |\n" + "| Idade: " + usuario.getIdade()
+							+ "    |\n" + "| CPF: " + usuario.getCpf() + "    |\n" + "| RG: " + usuario.getRg()
+							+ "    |\n" + "| Telefone: " + usuario.getNumTelefone() + "    |\n" + "| Email: "
+							+ usuario.getEmail() + "    |\n" + "| CEP: " + usuario.getCep() + "    |\n" + "| Sexo: "
+							+ usuario.getSexo() + "    |\n");
 				}
 				System.out.println("========================\n");
 				break;
 			}
-			default:
-				break;
-			}
 			
 			}
-			
-		
 
+		}
+
+		//MENU - VEICULO
 		while (opcaoEscolhida != 0) {
 			System.out.println("==================\n" + "| MENU PRINCIPAL |\n" + "| [0] Sair       |\n"
 					+ "| [1] Cadastrar  |\n" + "| [2] Alterar   |\n" + "| [3] Excluir    |\n" + "| [4] Listar     |\n"
-					+  "| [5]  Comprar     |\n" + "==================\n");
+					+ "| [5]  Comprar     |\n" + "==================\n");
 
 			System.out.print(u.getNome() + ", selecione uma opcao acima: ");
 			opcaoEscolhida = Integer.valueOf(ler.nextLine());
@@ -158,11 +155,15 @@ public class MainVeiculo {
 			case 0: {
 				break;
 			}
+			
+			//CADASTRAR - VEICULO
 			case 1: {
 				opcaoVeiculo.cadastrarVeiculo(v);
 				listaVeiculos.add(v);
 				break;
 			}
+			
+			//ALTERAR VEICULO
 			case 2: {
 				Boolean encontrou = false;
 				Integer id;
@@ -171,7 +172,8 @@ public class MainVeiculo {
 				System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
 
 				for (Veiculo v1 : listaVeiculos) {
-					System.out.println("|    " + v1.getId() + "    |    "+ v1.getMarca() + "    |    " + v1.getModelo() + "    |\n");
+					System.out.println("|    " + v1.getId() + "    |    " + v1.getMarca() + "    |    " + v1.getModelo()
+							+ "    |\n");
 					System.out.println("=========================================\n	");
 				}
 
@@ -180,7 +182,7 @@ public class MainVeiculo {
 				id = Integer.valueOf(ler.nextLine());
 
 				while (opcaoAlterar != 0) {
-	
+
 					System.out.println("===========================\n" + "|    MENU DE ALTERACAO    |\n"
 							+ "| [0]  Sair               |\n" + "| [1]  Marca              |\n"
 							+ "| [2]  Modelo             |\n" + "| [3]  Ano de fabricacao  |\n"
@@ -192,7 +194,6 @@ public class MainVeiculo {
 					System.out.println(u.getNome() + ", informe o que deseja alterar: ");
 					opcaoAlterar = Integer.valueOf(ler.nextLine());
 
-				
 					switch (opcaoAlterar) {
 					case 0: {
 						break;
@@ -371,10 +372,11 @@ public class MainVeiculo {
 						break;
 					}
 				}
-					break;
+				break;
 			}
+			
+			//EXCLUIR VEICULO
 			case 3: {
-//				limparConsole();
 				Integer opcao;
 				Boolean encontrou = false;
 				Integer id;
@@ -384,7 +386,8 @@ public class MainVeiculo {
 					System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
 
 					for (Veiculo v1 : listaVeiculos) {
-						System.out.println("|    " + v1.getId() + "    |    "+ v1.getMarca() + "    |    " + v1.getModelo() + "    |\n");
+						System.out.println("|    " + v1.getId() + "    |    " + v1.getMarca() + "    |    "
+								+ v1.getModelo() + "    |\n");
 					}
 					System.out.println("=========================================\n");
 
@@ -411,28 +414,28 @@ public class MainVeiculo {
 					}
 					break;
 				}
-//				opcaoVeiculo.excluir(veiculo, opcaoEscolhidaUsuario);
 				break;
 			}
+			
+			//LISTAR VEICULO
 			case 4: {
-//				limparConsole();
+
 				System.out.println("==========================\n");
 				System.out.println("|   LISTA DE VEICULOS    |\n");
 				for (Veiculo v1 : listaVeiculos) {
-					System.out.println("| Marca: " + v1.getMarca() + "    |\n" 
-							+ "| Modelo: " + v1.getModelo() + "    |\n"
-							+ "| Ano fabricacao: " + v1.getAnoFabricacao() + "    |\n" 
-							+ "| Pneus: " + v1.getQtdPneu() + "    |\n" 
-							+ "| Cor: " + v1.getCor() + "    |\n" 
-							+ "| Placa: " + v1.getPlaca() + "    |\n"
-							+ "| Total donos: " + v1.getTotalDonos() + "    |\n" 
-							+ "| KM rodados: " + v1.getKmRodados() + "    |\n" 
-							+ "| Tipo automovel: " + v1.getTipoAutomovel() + "    |\n" 
-							+ "| Tipo combustivel: " + v1.getTipoCombustivel() + "    |\n");
+					System.out.println("| Marca: " + v1.getMarca() + "    |\n" + "| Modelo: " + v1.getModelo()
+							+ "    |\n" + "| Ano fabricacao: " + v1.getAnoFabricacao() + "    |\n" + "| Pneus: "
+							+ v1.getQtdPneu() + "    |\n" + "| Cor: " + v1.getCor() + "    |\n" + "| Placa: "
+							+ v1.getPlaca() + "    |\n" + "| Total donos: " + v1.getTotalDonos() + "    |\n"
+							+ "| KM rodados: " + v1.getKmRodados() + "    |\n" + "| Tipo automovel: "
+							+ v1.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + v1.getTipoCombustivel()
+							+ "    |\n");
 				}
 				System.out.println("========================\n");
 				break;
 			}
+			
+			//COMPRAR VEICULO
 			case 5: {
 				Integer opcao;
 				Boolean encontrou = false;
@@ -443,7 +446,8 @@ public class MainVeiculo {
 					System.out.println("|    ID    |    MARCA    |    MODELO    |\n");
 
 					for (Veiculo v1 : listaVeiculos) {
-						System.out.println("|    " + v1.getId() + "    |    "+ v1.getMarca() + "    |    " + v1.getModelo() + "    |\n");
+						System.out.println("|    " + v1.getId() + "    |    " + v1.getMarca() + "    |    "
+								+ v1.getModelo() + "    |\n");
 					}
 					System.out.println("=========================================\n");
 
@@ -472,17 +476,15 @@ public class MainVeiculo {
 				}
 				break;
 			}
-			
-			default: 
+
+			default:
 				break;
 			}
-			
+
 		}
-		
+
 		ler.close();
 
 	}
 
-
-	
 }
