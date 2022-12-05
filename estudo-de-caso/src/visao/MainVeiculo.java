@@ -9,6 +9,7 @@ import controle.UsuarioDAO;
 import controle.VeiculoDAO;
 
 public class MainVeiculo {
+	@SuppressWarnings("unlikely-arg-type")
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 
@@ -33,7 +34,7 @@ public class MainVeiculo {
 		// MENU CADDASTRO - USUARIO
 		while (opcaoSelecionada != 0) {
 			System.out.println("==================\n" + "| MENU CADASTRO     |\n" + "| [0] Avancar       |\n"
-					+ "| [1] Cadastrar     |\n" + "| [2] Listar        |\n" + "==================\n");
+					+ "| [1] Cadastrar     |\n" + "| [2] Listar        |\n" +  "| [3] Excluir        |\n" + "==================\n");
 			System.out.print("Selecione uma opcao de cadastro acima: ");
 			opcaoSelecionada = Integer.valueOf(ler.nextLine());
 
@@ -136,6 +137,47 @@ public class MainVeiculo {
 				}
 				System.out.println("========================\n");
 				break;
+			}
+			
+			case 3: {
+				Boolean encontrou = false;
+				String excluir;
+
+				while (true) {
+					System.out.println("=========================================\n");
+					System.out.println("|    RG    |    NOME    |    CPF    |\n");
+
+					for (Usuario u1 : lista) {
+						System.out.println("|    " + u1.getRg() + "    |    " + u1.getNome() + "    |    "
+								+ u1.getCpf() + "    |\n");
+					}
+					System.out.println("=========================================\n");
+
+					System.out.println(u.getRg() + ", informe o RG do usuario para excluir: ");
+					excluir = ler.nextLine();
+
+					if (excluir.equals(0)) {
+						System.out.println(u.getNome() + " saiu");
+						break;
+					}
+
+					for (Usuario u1 : lista) {
+						if (excluir.equals(u1.getRg())) {
+							encontrou = true;
+							lista.remove(u1);
+							System.out.println(u.getNome() + ", operacao feita com sucesso");
+							break;
+						}
+					}
+
+					if (encontrou == false) {
+						System.out.println(u.getNome() + ", codigo informado nao existe");
+						break;
+					}
+					break;
+				}
+				break;
+				
 			}
 			
 			}

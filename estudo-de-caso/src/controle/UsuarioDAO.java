@@ -10,6 +10,7 @@ public class UsuarioDAO implements IUsuarioDAO {
 	private static ArrayList<Usuario> tabelaUsuario;
 	private static UsuarioDAO instanciaUsuario;
 	
+	
 	private UsuarioDAO() {
 	}
 	
@@ -37,5 +38,9 @@ public class UsuarioDAO implements IUsuarioDAO {
 	public ArrayList<Usuario> listarUsuarios() {
 		return tabelaUsuario;
 	}
+
+	
+
+	
 
 }
