@@ -12,6 +12,6 @@ public interface IVeiculoDAO {
     
     public boolean comprar(Veiculo v, Integer id);
     
-	public ArrayList<Veiculo> listarVeiculos();
+	public void listarVeiculos();
 	
 }

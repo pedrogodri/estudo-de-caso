@@ -29,6 +29,11 @@ public class MainVeiculo {
 
 		// VEICULO
 		ArrayList<Veiculo> listaVeiculos = new ArrayList<Veiculo>();
+		ArrayList<Carro> listaCarros = new ArrayList<Carro>();
+		ArrayList<Moto> listaMotos = new ArrayList<Moto>();
+		ArrayList<Caminhao> listaCaminhao = new ArrayList<Caminhao>();
+		ArrayList<Onibus> listaOnibus = new ArrayList<Onibus>();
+		
 		Veiculo v = new Veiculo(null, null, opcaoSelecionada, opcaoSelecionada, null, null, opcaoSelecionada, null,
 				null, null);
 		Moto m = new Moto(null, null, opcaoAlterar, opcaoAlterar, null, null, opcaoAlterar, null, null, null);
@@ -456,7 +461,7 @@ public class MainVeiculo {
 							listaVeiculos.remove(v1);
 							System.out.println(u.getNome() + ", operacao feita com sucesso");
 							break;
-						}
+						}	
 					}
 
 					if (encontrou == false) {
@@ -471,21 +476,7 @@ public class MainVeiculo {
 			//LISTAR VEICULO
 			case 4: {
 
-				System.out.println("==========================\n");
-				System.out.println("|   LISTA DE VEICULOS    |\n");
-				for (Veiculo v1 : listaVeiculos) {
-					System.out.println("| Marca: " + v1.getMarca() + "    |\n" + "| Modelo: " + v1.getModelo()
-							+ "    |\n" + "| Ano fabricacao: " + v1.getAnoFabricacao() + "    |\n" + "| Pneus: "
-							+ v1.getQtdPneu() + "    |\n" + "| Cor: " + v1.getCor() + "    |\n" + "| Placa: "
-							+ v1.getPlaca() + "    |\n" + "| Total donos: " + v1.getTotalDonos() + "    |\n"
-							+ "| KM rodados: " + v1.getKmRodados() + "    |\n" + "| Tipo automovel: "
-							+ v1.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + v1.getTipoCombustivel() + "    |\n" 
-							+ "| Numero portas: " + c.getNumeroPortas() + "    |\n" + "| Numero bancos: "  + c.getNumeroBancos() + "    |\n" 
-							+ "| Airbag: " + c.getAirBag() + "    |\n" + "| Ar condicionado: "  + c.getArCodicionado() + "    |\n" +  "| Cavalos: " +  c.getCavalosMotor() + "    |\n" +
-							"| Numero de rodas: " + m.getNumeroRodas() + "    |\n" + "| Numero de cilindros: " + m.getCilindroMoto() + "    |\n" + "| Bagageiro: " + m.getBagageiro() + "    |\n" + "| Quantidade de assentos: "  + o.getQuantidadeAssentos() + "    |\n" + "| Quantidade de peso: "  + ca.getQuantidadePeso() +  "|\n");
-				}
-				System.out.println("========================\n");
-				break;
+				opcaoVeiculo.listarVeiculos();
 			}
 			
 			//COMPRAR VEICULO
