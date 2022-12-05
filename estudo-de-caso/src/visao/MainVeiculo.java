@@ -34,9 +34,9 @@ public class MainVeiculo {
 		while (opcaoSelecionada != 0) {
 			System.out.println("==================\n" + 
 					  "| MENU CADASTRO     |\n" 
-					+ "| [0] AVANCAR       |\n"
-					+ "| [1] CADASTRAR     |\n" 
-					+ "| [2] LISTAR        |\n" + "==================\n");
+					+ "| [0] Avancar       |\n"
+					+ "| [1] Cadastrar     |\n" 
+					+ "| [2] Listar        |\n" + "==================\n");
 			System.out.print("Selecione uma opcao de cadastro acima: ");
 			opcaoSelecionada = Integer.valueOf(ler.nextLine());
 			
@@ -50,7 +50,7 @@ public class MainVeiculo {
 				System.out.println("==================================================\n"
 						+ "| NECESSITAMOS DE ALGUMAS INFORMACOES PARA O CADASTRO |\n"
 						+ "==================================================\n");
-				System.out.println("-> NOME(Ex:. Rafael): ");
+				System.out.println("-> Nome(Ex:. Rafael): ");
 				String nome = ler.nextLine();
 				if (!nome.isEmpty()) {
 					u.setNome(String.valueOf(nome));
@@ -58,7 +58,7 @@ public class MainVeiculo {
 					System.out.println("Erro no nome");
 				}
 
-				System.out.println("-> IDADE(Ex:. 18): ");
+				System.out.println("-> Idade(Ex:. 18): ");
 				String idade = ler.nextLine();
 				if (!idade.isEmpty()) {
 					u.setIdade(String.valueOf(idade));
@@ -90,7 +90,7 @@ public class MainVeiculo {
 					System.out.println("Erro no Numero de telefone");
 				}
 				
-				System.out.println("-> Email (Ex:. youremail@email.com): \"");
+				System.out.println("-> E-mail (Ex:. youremail@email.com): \"");
 				String email = ler.nextLine();
 				if (!email.isEmpty()) {
 					u.setEmail(String.valueOf(email));
@@ -147,9 +147,9 @@ public class MainVeiculo {
 		
 
 		while (opcaoEscolhida != 0) {
-			System.out.println("==================\n" + "| MENU PRINCIPAL |\n" + "| [0] SAIR       |\n"
-					+ "| [1] CADASTRAR  |\n" + "| [2] ALTERAR    |\n" + "| [3] EXCLUIR    |\n" + "| [4] LISTAR     |\n"
-					+  "| [5]  COMPRAR     |\n" + "==================\n");
+			System.out.println("==================\n" + "| MENU PRINCIPAL |\n" + "| [0] Sair       |\n"
+					+ "| [1] Cadastrar  |\n" + "| [2] Alterar   |\n" + "| [3] Excluir    |\n" + "| [4] Listar     |\n"
+					+  "| [5]  Comprar     |\n" + "==================\n");
 
 			System.out.print(u.getNome() + ", selecione uma opcao acima: ");
 			opcaoEscolhida = Integer.valueOf(ler.nextLine());
@@ -182,12 +182,12 @@ public class MainVeiculo {
 				while (opcaoAlterar != 0) {
 	
 					System.out.println("===========================\n" + "|    MENU DE ALTERACAO    |\n"
-							+ "| [0]  SAIR               |\n" + "| [1]  MARCA              |\n"
-							+ "| [2]  MODELO             |\n" + "| [3]  ANO DE FABRICACAO  |\n"
-							+ "| [4]  QUANTIDADE DE PNEU |\n" + "| [5]  COR                |\n"
-							+ "| [6]  PLACA              |\n" + "| [7]  TOTAL DONOS        |\n"
-							+ "| [8]  KMs RODADOS        |\n" + "| [9]  TIPO VEÍCULO       |\n"
-							+ "| [10] COMBUSTIVEL USADO  |\n" + "===========================\n");
+							+ "| [0]  Sair               |\n" + "| [1]  Marca              |\n"
+							+ "| [2]  Modelo             |\n" + "| [3]  Ano de fabricacao  |\n"
+							+ "| [4]  Quantidade de pneu |\n" + "| [5]  Cor                |\n"
+							+ "| [6]  Placa              |\n" + "| [7]  Total donos        |\n"
+							+ "| [8]  KMs rodados        |\n" + "| [9]  Tipo veiculo       |\n"
+							+ "| [10] Combustivel usado  |\n" + "===========================\n");
 
 					System.out.println(u.getNome() + ", informe o que deseja alterar: ");
 					opcaoAlterar = Integer.valueOf(ler.nextLine());
