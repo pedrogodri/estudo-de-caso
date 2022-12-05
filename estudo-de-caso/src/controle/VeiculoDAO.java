@@ -72,7 +72,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> MARCA(Ex:. Fiat): ");
 			String marca = ler.nextLine();
 			if (!marca.isEmpty()) {
-				v.setMarca(String.valueOf(marca));
+				m.setMarca(String.valueOf(marca));
 			} else {
 				System.out.println("Erro na marca");
 			}
@@ -80,7 +80,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> MODELO(Ex:. Argo): ");
 			String modelo = ler.nextLine();
 			if (!modelo.isEmpty()) {
-				v.setModelo(String.valueOf(modelo));
+				m.setModelo(String.valueOf(modelo));
 			} else {
 				System.out.println("Erro no modelo");
 			}
@@ -88,7 +88,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> ANO DE FABRICACAO(Ex:. 2022): ");
 			Integer anoFabricacao = Integer.valueOf(ler.nextLine());
 			if (!anoFabricacao.toString().isEmpty()) {
-				v.setAnoFabricacao(Integer.valueOf(anoFabricacao));
+				m.setAnoFabricacao(Integer.valueOf(anoFabricacao));
 			} else {
 				System.out.println("Erro no ano de fabricação");
 			}
@@ -96,7 +96,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> QUANTIDADE DE PNEU(Ex:. 4): ");
 			Integer qtdPneu = Integer.valueOf(ler.nextLine());
 			if (!qtdPneu.toString().isEmpty()) {
-				v.setQtdPneu(Integer.valueOf(qtdPneu));
+				m.setQtdPneu(Integer.valueOf(qtdPneu));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -104,7 +104,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> COR (Ex:. Branco): ");
 			String cor = ler.nextLine();
 			if (!cor.isEmpty()) {
-				v.setCor(cor);
+				m.setCor(cor);
 			} else {
 				System.out.println("Erro na cor");
 			}
@@ -112,7 +112,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> PLACA(Ex:. AE34F65): ");
 			String placa = ler.nextLine();
 			if (!placa.isEmpty()) {
-				v.setPlaca(String.valueOf(placa));
+				m.setPlaca(String.valueOf(placa));
 			} else {
 				System.out.println("Erro na placa");
 			}
@@ -120,7 +120,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> TOTAL DONOS(Ex:. 2): ");
 			Integer totalDonos = Integer.valueOf(ler.nextLine());
 			if (!qtdPneu.toString().isEmpty()) {
-				v.setTotalDonos(Integer.valueOf(totalDonos));
+				m.setTotalDonos(Integer.valueOf(totalDonos));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -128,7 +128,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> KMs RODADOS(Ex:. 365.67):");
 			Float kmRodados = Float.valueOf(ler.nextLine());
 			if (!kmRodados.toString().isEmpty()) {
-				v.setKmRodados(Float.valueOf(kmRodados));
+				m.setKmRodados(Float.valueOf(kmRodados));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -136,7 +136,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> TIPO DO VEICULO(Ex:. SUV): ");
 			String tipoAutomovel = ler.nextLine();
 			if (!tipoAutomovel.isEmpty()) {
-				v.setTipoAutomovel(String.valueOf(tipoAutomovel));
+				m.setTipoAutomovel(String.valueOf(tipoAutomovel));
 			} else {
 				System.out.println("Erro no tipo veiculo");
 			}
@@ -144,7 +144,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> COMBUSTIVEL USADO(Ex:. Gasolina): ");
 			String tipoCombustivel = ler.nextLine();
 			if (!tipoCombustivel.isEmpty()) {
-				v.setTipoCombustivel(String.valueOf(tipoCombustivel));
+				m.setTipoCombustivel(String.valueOf(tipoCombustivel));
 			} else {
 				System.out.println("Erro no tipo veiculo");
 			}
@@ -164,7 +164,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> MARCA(Ex:. Fiat): ");
 			String marca = ler.nextLine();
 			if (!marca.isEmpty()) {
-				v.setMarca(String.valueOf(marca));
+				ca.setMarca(String.valueOf(marca));
 			} else {
 				System.out.println("Erro na marca");
 			}
@@ -172,7 +172,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> MODELO(Ex:. Argo): ");
 			String modelo = ler.nextLine();
 			if (!modelo.isEmpty()) {
-				v.setModelo(String.valueOf(modelo));
+				ca.setModelo(String.valueOf(modelo));
 			} else {
 				System.out.println("Erro no modelo");
 			}
@@ -180,7 +180,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> ANO DE FABRICACAO(Ex:. 2022): ");
 			Integer anoFabricacao = Integer.valueOf(ler.nextLine());
 			if (!anoFabricacao.toString().isEmpty()) {
-				v.setAnoFabricacao(Integer.valueOf(anoFabricacao));
+				ca.setAnoFabricacao(Integer.valueOf(anoFabricacao));
 			} else {
 				System.out.println("Erro no ano de fabricação");
 			}
@@ -188,7 +188,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> QUANTIDADE DE PNEU(Ex:. 4): ");
 			Integer qtdPneu = Integer.valueOf(ler.nextLine());
 			if (!qtdPneu.toString().isEmpty()) {
-				v.setQtdPneu(Integer.valueOf(qtdPneu));
+				ca.setQtdPneu(Integer.valueOf(qtdPneu));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -196,7 +196,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> COR (Ex:. Branco): ");
 			String cor = ler.nextLine();
 			if (!cor.isEmpty()) {
-				v.setCor(cor);
+				ca.setCor(cor);
 			} else {
 				System.out.println("Erro na cor");
 			}
@@ -204,7 +204,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> PLACA(Ex:. AE34F65): ");
 			String placa = ler.nextLine();
 			if (!placa.isEmpty()) {
-				v.setPlaca(String.valueOf(placa));
+				ca.setPlaca(String.valueOf(placa));
 			} else {
 				System.out.println("Erro na placa");
 			}
@@ -212,7 +212,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> TOTAL DONOS(Ex:. 2): ");
 			Integer totalDonos = Integer.valueOf(ler.nextLine());
 			if (!qtdPneu.toString().isEmpty()) {
-				v.setTotalDonos(Integer.valueOf(totalDonos));
+				ca.setTotalDonos(Integer.valueOf(totalDonos));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -220,7 +220,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> KMs RODADOS(Ex:. 365.67):");
 			Float kmRodados = Float.valueOf(ler.nextLine());
 			if (!kmRodados.toString().isEmpty()) {
-				v.setKmRodados(Float.valueOf(kmRodados));
+				ca.setKmRodados(Float.valueOf(kmRodados));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -228,7 +228,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> TIPO DO VEICULO(Ex:. SUV): ");
 			String tipoAutomovel = ler.nextLine();
 			if (!tipoAutomovel.isEmpty()) {
-				v.setTipoAutomovel(String.valueOf(tipoAutomovel));
+				ca.setTipoAutomovel(String.valueOf(tipoAutomovel));
 			} else {
 				System.out.println("Erro no tipo veiculo");
 			}
@@ -236,7 +236,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> COMBUSTIVEL USADO(Ex:. Gasolina): ");
 			String tipoCombustivel = ler.nextLine();
 			if (!tipoCombustivel.isEmpty()) {
-				v.setTipoCombustivel(String.valueOf(tipoCombustivel));
+				ca.setTipoCombustivel(String.valueOf(tipoCombustivel));
 			} else {
 				System.out.println("Erro no tipo veiculo");
 			}
@@ -264,7 +264,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> MODELO(Ex:. Argo): ");
 			String modelo = ler.nextLine();
 			if (!modelo.isEmpty()) {
-				v.setModelo(String.valueOf(modelo));
+				o.setModelo(String.valueOf(modelo));
 			} else {
 				System.out.println("Erro no modelo");
 			}
@@ -272,7 +272,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> ANO DE FABRICACAO(Ex:. 2022): ");
 			Integer anoFabricacao = Integer.valueOf(ler.nextLine());
 			if (!anoFabricacao.toString().isEmpty()) {
-				v.setAnoFabricacao(Integer.valueOf(anoFabricacao));
+				o.setAnoFabricacao(Integer.valueOf(anoFabricacao));
 			} else {
 				System.out.println("Erro no ano de fabricação");
 			}
@@ -280,7 +280,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> QUANTIDADE DE PNEU(Ex:. 4): ");
 			Integer qtdPneu = Integer.valueOf(ler.nextLine());
 			if (!qtdPneu.toString().isEmpty()) {
-				v.setQtdPneu(Integer.valueOf(qtdPneu));
+				o.setQtdPneu(Integer.valueOf(qtdPneu));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -288,7 +288,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> COR (Ex:. Branco): ");
 			String cor = ler.nextLine();
 			if (!cor.isEmpty()) {
-				v.setCor(cor);
+				o.setCor(cor);
 			} else {
 				System.out.println("Erro na cor");
 			}
@@ -296,7 +296,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> PLACA(Ex:. AE34F65): ");
 			String placa = ler.nextLine();
 			if (!placa.isEmpty()) {
-				v.setPlaca(String.valueOf(placa));
+				o.setPlaca(String.valueOf(placa));
 			} else {
 				System.out.println("Erro na placa");
 			}
@@ -304,7 +304,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> TOTAL DONOS(Ex:. 2): ");
 			Integer totalDonos = Integer.valueOf(ler.nextLine());
 			if (!qtdPneu.toString().isEmpty()) {
-				v.setTotalDonos(Integer.valueOf(totalDonos));
+				o.setTotalDonos(Integer.valueOf(totalDonos));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -312,7 +312,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> KMs RODADOS(Ex:. 365.67):");
 			Float kmRodados = Float.valueOf(ler.nextLine());
 			if (!kmRodados.toString().isEmpty()) {
-				v.setKmRodados(Float.valueOf(kmRodados));
+				o.setKmRodados(Float.valueOf(kmRodados));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -320,7 +320,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> TIPO DO VEICULO(Ex:. SUV): ");
 			String tipoAutomovel = ler.nextLine();
 			if (!tipoAutomovel.isEmpty()) {
-				v.setTipoAutomovel(String.valueOf(tipoAutomovel));
+				o.setTipoAutomovel(String.valueOf(tipoAutomovel));
 			} else {
 				System.out.println("Erro no tipo veiculo");
 			}
@@ -328,7 +328,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> COMBUSTIVEL USADO(Ex:. Gasolina): ");
 			String tipoCombustivel = ler.nextLine();
 			if (!tipoCombustivel.isEmpty()) {
-				v.setTipoCombustivel(String.valueOf(tipoCombustivel));
+				o.setTipoCombustivel(String.valueOf(tipoCombustivel));
 			} else {
 				System.out.println("Erro no tipo veiculo");
 			}
@@ -380,7 +380,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> MODELO(Ex:. Argo): ");
 			String modelo = ler.nextLine();
 			if (!modelo.isEmpty()) {
-				v.setModelo(String.valueOf(modelo));
+				c.setModelo(String.valueOf(modelo));
 			} else {
 				System.out.println("Erro no modelo");
 			}
@@ -388,7 +388,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> ANO DE FABRICACAO(Ex:. 2022): ");
 			Integer anoFabricacao = Integer.valueOf(ler.nextLine());
 			if (!anoFabricacao.toString().isEmpty()) {
-				v.setAnoFabricacao(Integer.valueOf(anoFabricacao));
+				c.setAnoFabricacao(Integer.valueOf(anoFabricacao));
 			} else {
 				System.out.println("Erro no ano de fabricação");
 			}
@@ -396,7 +396,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> QUANTIDADE DE PNEU(Ex:. 4): ");
 			Integer qtdPneu = Integer.valueOf(ler.nextLine());
 			if (!qtdPneu.toString().isEmpty()) {
-				v.setQtdPneu(Integer.valueOf(qtdPneu));
+				c.setQtdPneu(Integer.valueOf(qtdPneu));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -404,7 +404,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> COR (Ex:. Branco): ");
 			String cor = ler.nextLine();
 			if (!cor.isEmpty()) {
-				v.setCor(cor);
+				c.setCor(cor);
 			} else {
 				System.out.println("Erro na cor");
 			}
@@ -412,7 +412,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> PLACA(Ex:. AE34F65): ");
 			String placa = ler.nextLine();
 			if (!placa.isEmpty()) {
-				v.setPlaca(String.valueOf(placa));
+				c.setPlaca(String.valueOf(placa));
 			} else {
 				System.out.println("Erro na placa");
 			}
@@ -420,7 +420,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> TOTAL DONOS(Ex:. 2): ");
 			Integer totalDonos = Integer.valueOf(ler.nextLine());
 			if (!qtdPneu.toString().isEmpty()) {
-				v.setTotalDonos(Integer.valueOf(totalDonos));
+				c.setTotalDonos(Integer.valueOf(totalDonos));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -428,7 +428,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> KMs RODADOS(Ex:. 365.67):");
 			Float kmRodados = Float.valueOf(ler.nextLine());
 			if (!kmRodados.toString().isEmpty()) {
-				v.setKmRodados(Float.valueOf(kmRodados));
+				c.setKmRodados(Float.valueOf(kmRodados));
 			} else {
 				System.out.println("Erro na quantidade de pneus");
 			}
@@ -436,7 +436,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> TIPO DO VEICULO(Ex:. SUV): ");
 			String tipoAutomovel = ler.nextLine();
 			if (!tipoAutomovel.isEmpty()) {
-				v.setTipoAutomovel(String.valueOf(tipoAutomovel));
+				c.setTipoAutomovel(String.valueOf(tipoAutomovel));
 			} else {
 				System.out.println("Erro no tipo veiculo");
 			}
@@ -444,7 +444,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 			System.out.println("-> COMBUSTIVEL USADO(Ex:. Gasolina): ");
 			String tipoCombustivel = ler.nextLine();
 			if (!tipoCombustivel.isEmpty()) {
-				v.setTipoCombustivel(String.valueOf(tipoCombustivel));
+				c.setTipoCombustivel(String.valueOf(tipoCombustivel));
 			} else {
 				System.out.println("Erro no tipo veiculo");
 			}
@@ -460,88 +460,7 @@ public class VeiculoDAO implements IVeiculoDAO {
 		}
 		}
 
-		System.out.println("-> MARCA(Ex:. Fiat): ");
-		String marca = ler.nextLine();
-		if (!marca.isEmpty()) {
-			v.setMarca(String.valueOf(marca));
-		} else {
-			System.out.println("Erro na marca");
-		}
-
-		System.out.println("-> MODELO(Ex:. Argo): ");
-		String modelo = ler.nextLine();
-		if (!modelo.isEmpty()) {
-			v.setModelo(String.valueOf(modelo));
-		} else {
-			System.out.println("Erro no modelo");
-		}
-
-		System.out.println("-> ANO DE FABRICACAO(Ex:. 2022): ");
-		Integer anoFabricacao = Integer.valueOf(ler.nextLine());
-		if (!anoFabricacao.toString().isEmpty()) {
-			v.setAnoFabricacao(Integer.valueOf(anoFabricacao));
-		} else {
-			System.out.println("Erro no ano de fabricação");
-		}
-
-		System.out.println("-> QUANTIDADE DE PNEU(Ex:. 4): ");
-		Integer qtdPneu = Integer.valueOf(ler.nextLine());
-		if (!qtdPneu.toString().isEmpty()) {
-			v.setQtdPneu(Integer.valueOf(qtdPneu));
-		} else {
-			System.out.println("Erro na quantidade de pneus");
-		}
-
-		System.out.println("-> COR (Ex:. Branco): ");
-		String cor = ler.nextLine();
-		if (!cor.isEmpty()) {
-			v.setCor(cor);
-		} else {
-			System.out.println("Erro na cor");
-		}
-
-		System.out.println("-> PLACA(Ex:. AE34F65): ");
-		String placa = ler.nextLine();
-		if (!placa.isEmpty()) {
-			v.setPlaca(String.valueOf(placa));
-		} else {
-			System.out.println("Erro na placa");
-		}
-
-		System.out.println("-> TOTAL DONOS(Ex:. 2): ");
-		Integer totalDonos = Integer.valueOf(ler.nextLine());
-		if (!qtdPneu.toString().isEmpty()) {
-			v.setTotalDonos(Integer.valueOf(totalDonos));
-		} else {
-			System.out.println("Erro na quantidade de pneus");
-		}
-
-		System.out.println("-> KMs RODADOS(Ex:. 365.67):");
-		Float kmRodados = Float.valueOf(ler.nextLine());
-		if (!kmRodados.toString().isEmpty()) {
-			v.setKmRodados(Float.valueOf(kmRodados));
-		} else {
-			System.out.println("Erro na quantidade de pneus");
-		}
-
-		System.out.println("-> TIPO DO VEICULO(Ex:. SUV): ");
-		String tipoAutomovel = ler.nextLine();
-		if (!tipoAutomovel.isEmpty()) {
-			v.setTipoAutomovel(String.valueOf(tipoAutomovel));
-		} else {
-			System.out.println("Erro no tipo veiculo");
-		}
-
-		System.out.println("-> COMBUSTIVEL USADO(Ex:. Gasolina): ");
-		String tipoCombustivel = ler.nextLine();
-		if (!tipoCombustivel.isEmpty()) {
-			v.setTipoCombustivel(String.valueOf(tipoCombustivel));
-		} else {
-			System.out.println("Erro no tipo veiculo");
-		}
-
-		System.out.println("===================================================\n");
-
+		
 		return true;
 	}
 
