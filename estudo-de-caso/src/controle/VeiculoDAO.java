@@ -180,22 +180,6 @@ public class VeiculoDAO implements IVeiculoDAO {
 	@Override
 	public ArrayList<Veiculo> listarVeiculos() {
 		
-//		System.out.println("==========================\n");
-//		System.out.println("|   LISTA DE VEICULOS    |\n");
-//		for (Veiculo loopVeiculo : listaVeiculos) {
-//			System.out.println("| Marca: " + veiculo.getMarca() + "    |\n" 
-//					+ "| Modelo: " + veiculo.getModelo() + "    |\n"
-//					+ "| Ano fabricacao: " + veiculo.getAnoFabricacao() + "    |\n" 
-//					+ "| Pneus: " + veiculo.getQtdPneu() + "    |\n" 
-//					+ "| Cor: " + veiculo.getCor() + "    |\n" 
-//					+ "| Placa: " + veiculo.getPlaca() + "    |\n"
-//					+ "| Total donos: " + veiculo.getTotalDonos() + "    |\n" 
-//					+ "| KM rodados: " + veiculo.getKmRodados() + "    |\n" 
-//					+ "| Tipo automovel: " + veiculo.getTipoAutomovel() + "    |\n" 
-//					+ "| Tipo combustivel: " + veiculo.getTipoCombustivel() + "    |\n");
-//		}
-//		System.out.println("========================\n");
-//		
 		return listaVeiculos;
 	}
 
