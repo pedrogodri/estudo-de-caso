@@ -447,11 +447,11 @@ public class MainVeiculo {
 					}
 					System.out.println("=========================================\n");
 
-					System.out.println("Informe o id do veiculo para comprar: ");
+					System.out.println(u.getNome() + ", informe o id do veiculo para comprar: ");
 					id = Integer.valueOf(ler.nextLine());
 
 					if (id.equals(0)) {
-						System.out.println("Você saiu");
+						System.out.println(u.getNome() + " saiu");
 						break;
 					}
 
@@ -459,13 +459,13 @@ public class MainVeiculo {
 						if (id.equals(v1.getId())) {
 							encontrou = true;
 							listaVeiculos.remove(v1);
-							System.out.println("Operacao feita com sucesso");
+							System.out.println(u.getNome() + ", operacao feita com sucesso");
 							break;
 						}
 					}
 
 					if (encontrou == false) {
-						System.out.println("Codigo informado nao existe");
+						System.out.println(u.getNome() + ", codigo informado nao existe");
 						break;
 					}
 					break;
