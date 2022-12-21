@@ -345,7 +345,7 @@ public class MainVeiculo {
 				System.out.println("-> COR (Ex:. Branco): ");
 				String cor = ler.nextLine();
 				if (!cor.isEmpty()) {
-					v.setModelo(String.valueOf(cor));
+					v.setCor(String.valueOf(cor));
 				} else {
 					System.out.println("Erro na cor");
 				}
@@ -661,7 +661,9 @@ public class MainVeiculo {
 							+ veiculos.getQtdPneu() + "    |\n" + "| Cor: " + veiculos.getCor() + "    |\n" + "| Placa: "
 							+ veiculos.getPlaca() + "    |\n" + "| Total donos: " + veiculos.getTotalDonos() + "    |\n"
 							+ "| KM rodados: " + veiculos.getKmRodados() + "    |\n" + "| Tipo automovel: "
-							+ veiculos.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + veiculos.getTipoCombustivel() + "| Numero de rodas:   " +  "    |\n"  + m.getNumeroRodas() + "    |\n" + "| Numero de cilindros: " + m.getCilindroMoto() + "    |\n" + "| Bagageiro: " + m.getBagageiro() + "    |\n" +  "|\n");
+							+ veiculos.getTipoAutomovel() + "    |\n" + "| Tipo combustivel: " + veiculos.getTipoCombustivel() + "    |\n" +
+							"| Numero de rodas:   "  + m.getNumeroRodas() + "    |\n" + "| Numero de cilindros: " + m.getCilindroMoto() + "    |\n" 
+							+ "| Bagageiro: " + m.getBagageiro() + "    |\n" +  "|\n");
 				}
 				System.out.println("========================\n");
 				}
